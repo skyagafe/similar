@@ -8,6 +8,7 @@
     <meta property="og:image" content="http://trsketch.dothome.co.kr/_contents/2009curi/images/img910027.png" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
@@ -27,7 +28,6 @@
     <meta name="naver-site-verification" content="3d803629b654ec34d74239a8fd9298c795f8f9da" />
     <script data-ad-client="ca-pub-7053508855594400" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ec0bd2f06fa095f"></script>
-
 
 </head>
 
@@ -73,9 +73,8 @@
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" style="max-width: 50%; height: auto;" />
             <div>
-            
-            <img class="file-upload-image2" id="face-image2" src="img/fox.jpg" style="max-width: 80%; height: auto;" />
-</div>
+                <img class="file-upload-image2" id="face-image2" src="img/fox.jpg" style="max-width: 80%; height: auto;" />
+            </div>
             <div id="loading" class="load-wrapp">
                 <div class="load-2">
                     <div class="line"></div>
@@ -84,9 +83,8 @@
                 </div>
                 <p class="text-center">AI가 당신의 닮은꼴을 찾는중입니다.</p>
             </div>
-
-            <div class="result-message"></div>
-            <div id="label-container"></div>
+            <div class="result-message"></div>          
+            <div class="label-con" id="label-container"></div>
             <div class="image-title-wrap">
                 <button type="button" class="remove-image" onclick="javascript:location.replace('https://skyagafe.netlify.app/');">다시하기
                 </button>
@@ -96,9 +94,7 @@
 
     </div>
     <div id="webcam-container"></div>
-
     <div class="container addthis_inline_share_toolbox_wbpc"></div>
-
     <div class="container file-upload" id="disqus_thread"></div>
 
     <script>
@@ -128,6 +124,7 @@
                 reader.onload = function(e) {
                     $('.image-upload-wrap').hide();
                     $('#face-image2').hide();
+                    $('#percent').hide();
                     $('#loading').show();
                     $('.file-upload-image').attr('src', e.target.result);
                     $('.file-upload-content').show();
@@ -138,6 +135,7 @@
                     predict();
                     $('#loading').hide();
                     $('#face-image2').show();
+                    $('#percent').show();
                 });
             } else {
                 removeUpload();
@@ -278,11 +276,11 @@
             $('.result-message').html(resultMessage);
             for (let i = 0; i < maxPredictions; i++) {
                 const classPrediction =
-                    prediction[i].className + ": " + Math.round(prediction[i].probability.toFixed(2) *100) + "%";
+                    prediction[i].className + " : " + Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
                 labelContainer.childNodes[0].innerHTML = classPrediction;
                 labelContainer.childNodes[-1].innerHTML = classPrediction;
-            }          
-        }
+            }
+        }      
     </script>
 
 </body>

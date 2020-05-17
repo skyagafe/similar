@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Black Han Sans', sans-serif;
     background-color: #ffffff;
 }
 .file-upload {
@@ -86,7 +86,8 @@ body {
     max-height: 350px;
     max-width: 700px;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 25px;
+    padding: 2%;
     background-size: contain;
 }
 .remove-image {
@@ -136,6 +137,11 @@ body {
 .result-message {
     font-size: 1.3rem;
     color: #e56995;
+    margin: 1%;
+}
+.label-con {
+    font-size: 1.1rem;
+    color: #007bff;
     margin: 1%;
 }
 .title {
