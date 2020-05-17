@@ -128,6 +128,11 @@ body {
     text-align: center;
     background-color: #f6f7fa;
 }
+.kakao-ad {
+    padding: 0 15px 0px 15px;
+    text-align: center;
+    background-color: #f6f7fa;
+}
 .nav-distance {
     padding: 2.1% 7.7%;
 }
@@ -177,6 +182,7 @@ body {
     color: #f73737;
     text-decoration: underline;
     background-color: #f6f7fa;
+    padding: 10px 0 10px 0;
 }
 .youtube-link:hover {
     font-size: 1.1rem;
