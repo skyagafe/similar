@@ -15,7 +15,8 @@
     <title>로이홈</title>
     <meta name="title" content="닮은꼴 찾기">
     <meta name="subject" content="얼굴로 보는 인공지능 나의 닮은꼴 찾기, 결국 나는 무엇을 닮았는지 찾아보세요!">
-    <meta name="keywords" content="닮은꼴, 인공지능 닮은꼴 테스트, 닮은꼴 찾기, 닮은거 찾기, 얼굴상, 얼굴상 테스트, 나와 닮은 물건, 닮은꼴 찾기, 얼굴로 보는 물건상, 얼굴 닮음, 닮은 얼굴, 닮은 물건, 인공지능 닮은꼴, AI 얼굴상, AI 닮은거">
+    <meta name="description" content="얼굴로 보는 인공지능 나의 닮은꼴 찾기, 결국 나는 무엇을 닮았는지 찾아보세요! 대표 닮은꼴 연예인 사진 데이터로 학습한 인공지능이 나와 닮은꼴의 특징을 찾아드립니다. 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나의 닮은꼴 테스트 한번 해보세요! 얼굴상 테스트를 통해 나와 닮은꼴 찾기를 할 수 있습니다.">
+    <meta name="keywords" content="닮은꼴, 인공지능 닮은꼴 테스트, 닮은꼴 찾기, 사물 닮은거, 닮은 사물, 닮은거 찾기, 얼굴상, 얼굴상 테스트, 나와 닮은 물건, 닮은꼴 찾기, 얼굴로 보는 물건상, 얼굴 닮음, 닮은 얼굴, 닮은 물건, 인공지능 닮은꼴, AI 얼굴상, AI 닮은거, 비슷한 얼굴">
     <meta name="author" content="로이홈">
     <meta property="og:type" content="website">
     <meta property="og:title" content="로이홈">
@@ -32,7 +33,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light nav-distance">
-        <a class="navbar-brand" href="https://skyagafe.netlify.app/">결국 당신이 닮은것은?</a>
+        <a class="navbar-brand" href="https://skyagafe.netlify.app/">닮은꼴 찾기</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,7 +57,7 @@
         </div>
     </nav>
     <section class="section">
-        <h1 class="title">인공지능 닮은꼴 테스트 1+1</h1>
+        <h1 class="title">인공지능 닮은꼴 1+1</h1>
         <h2 class="subtitle">결국 당신이 닮은것은?</h2>
     </section>
 
@@ -70,9 +71,11 @@
             </div>
         </div>
         <div class="file-upload-content">
-            <img class="file-upload-image" id="face-image" src="#" alt="your image" style="max-width: 50%; height: auto;" />
+            <img class="file-upload-image" id="face-image" src="#" alt="your image" style="max-width: 30%; height: auto;" />
+            <div>
+            
             <img class="file-upload-image2" id="face-image2" src="img/fox.jpg" style="max-width: 50%; height: auto;" />
-
+</div>
             <div id="loading" class="load-wrapp">
                 <div class="load-2">
                     <div class="line"></div>
@@ -185,97 +188,97 @@
             var same = "";
             switch (prediction[0].className) {
                 case "Adam Driver":
-                    resultMessage = "스타워즈 아담 드라이버와 고양이를 닮았군요~"
+                    resultMessage = "스타워즈 아담 드라이버와 닮은듯 하지만 결국 고양이~"
                     resulttype = "Adam Driver";
                     break;
                 case "김나은":
-                    resultMessage = "탤런트 김나은과 탁구공을 닮았군요"
+                    resultMessage = "탤런트 김나은과 닮은듯 하지만 결국 탁구공~"
                     resulttype = "Kim Naeun"
                     break;
                 case "나연":
-                    resultMessage = "트와이스 나연과 토끼를 닮았군요!"
+                    resultMessage = "트와이스 나연과 닮은듯 하지만 결국 토끼!"
                     resulttype = "Na Yeon"
                     break;
                 case "Nicolas Cage":
-                    resultMessage = "케서방 니콜라스 케이지와 고양이를 닮았군요"
+                    resultMessage = "케서방 니콜라스 케이지와 닮은듯 하지만 결국 고양이"
                     resulttype = "Nicolas Cage"
                     break;
                 case "Donald Trump":
-                    resultMessage = "미국 대통령 도널드 트럼프와 고양이를 닮았군요"
+                    resultMessage = "미국 대통령 도널드 트럼프와 닮은듯 하지만 결국 고양이"
                     resulttype = "Donald Trump"
                     break;
                 case "Rafael Nadal":
-                    resultMessage = "테니스 선수 라파엘나달과 카피바라를 닮았군요"
+                    resultMessage = "테니스 선수 라파엘나달과 닮은듯 하지만 결국 카피바라~"
                     resulttype = "Rafael Nadal"
                     break;
                 case "박미선":
-                    resultMessage = "개그우먼 박미선과 신데렐라 언니를 닮았군요"
+                    resultMessage = "개그우먼 박미선과 닮은듯 하지만 결국 신데렐라 언니"
                     resulttype = "Park Miseon"
                     break;
                 case "박신양":
-                    resultMessage = "파리의 연인 박신양과 라디오를 닮았군요"
+                    resultMessage = "파리의 연인 박신양과 닮은듯 하지만 결국 라디오"
                     resulttype = "Park Sinyang"
                     break;
                 case "백일섭":
-                    resultMessage = "꽃보다 할배 백일섭과 배추를 닮았군요"
+                    resultMessage = "꽃보다 할배 백일섭과 닮은듯 하지만 결국 배추"
                     resulttype = "Paik Ilseop"
                     break;
                 case "백종원":
-                    resultMessage = "맛있쥬? 백종원과 치와와를 닮았군요"
+                    resultMessage = "맛있쥬? 백종원과 닮은듯 하지만 결국 치와와"
                     resulttype = "Paik Jongwon"
                     break;
                 case "소희":
-                    resultMessage = "만두 소희와 고양이를 닮았군요"
+                    resultMessage = "만두 소희와 닮은듯 하지만 결국 고양이"
                     resulttype = "So Hui"
                     break;
                 case "Snoop Dogg":
-                    resultMessage = "도기도기 스눕 독과 그레이 하운드를 닮았군요"
+                    resultMessage = "도기도기 스눕 독과 닮은듯 하지만 결국 그레이 하운드"
                     resulttype = "Snoop Dogg"
                     break;
                 case "엠버":
-                    resultMessage = "보이쉬한 엠버와 라마를 닮았군요"
+                    resultMessage = "보이쉬한 엠버와 닮은듯 하지만 결국 라마"
                     resulttype = "Amber"
                     break;
                 case "이윤석":
-                    resultMessage = "가냘픈 이윤석과 연필을 닮았군요"
+                    resultMessage = "가냘픈 이윤석과 닮은듯 하지만 결국 연필"
                     resulttype = "Lee Yunseok"
                     break;
                 case "이종혁":
-                    resultMessage = "머리빨 이종혁과 라마를 닮았군요"
+                    resultMessage = "머리빨 이종혁과 닮은듯 하지만 결국 라마"
                     resulttype = "Lee Jonghyeok"
                     break;
                 case "이회창":
-                    resultMessage = "정치인 이회창과 회를 닮았군요"
+                    resultMessage = "정치인 이회창과 닮은듯 하지만 결국 회"
                     resulttype = "Lee Hoechang"
                     break;
                 case "Jack Black":
-                    resultMessage = "눈 부릅 잭 블랙과 고양이를 닮았군요"
+                    resultMessage = "눈 부릅 잭 블랙과 닮은듯 하지만 결국 고양이"
                     resulttype = "Jack Black"
                     break;
                 case "Justin Timberlake":
-                    resultMessage = "면발 머리 저스틴 팀버레이크와 곱슬개를 닮았군요"
+                    resultMessage = "면발 머리 저스틴 팀버레이크와 닮은듯 하지만 결국 곱슬개"
                     resulttype = "Justin Timberlake"
                     break;
                 case "조우진":
-                    resultMessage = "연기자 조우진과 짱구에 나오는 캐릭을 닮았군요"
+                    resultMessage = "연기자 조우진과 닮은듯 하지만 결국 짱구에 나오는 캐릭"
                     resulttype = "Cho Ujin"
                     break;
                 case "John Travolta":
-                    resultMessage = "헐리우드 배우 존 트라볼타와 강아지를 닮았군요"
+                    resultMessage = "헐리우드 배우 존 트라볼타와 닮은듯 하지만 결국 강아지"
                     resulttype = "John Travolta"
                     break;
                 case "지민":
-                    resultMessage = "AOA 지민과 퍼그를 닮았군요"
+                    resultMessage = "AOA 지민과 닮은듯 하지만 결국 퍼그"
                     resulttype = "지민"
                     break;
                 default:
                     resultMessage = "뉘신지??"
             }
-            $('.result-message').html(resultMessage);
             $('.file-upload-image2').attr('src', "img/" + resulttype + ".jpg");
+            $('.result-message').html(resultMessage);
             for (let i = 0; i < maxPredictions; i++) {
                 const classPrediction =
-                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                    prediction[i].className + ": " + prediction[i].probability.toFixed(2) *100 + "%";
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
         }
