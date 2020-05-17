@@ -1,6 +1,6 @@
 body {
-    font-family: 'Black Han Sans', sans-serif;
-    background-color: #ffffff;
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: #ffffff; 
 }
 .file-upload {
     padding: 3% 3%;
@@ -74,6 +74,7 @@ body {
 .drag-text h3 {
     font-weight: 500;
     text-transform: uppercase;
+
 }
 .file-upload-image {
     max-height: 200px;
@@ -123,7 +124,6 @@ body {
     padding: 2.1% 7.7%;
 }
 .navbar-light .navbar-brand {
-    font-family: NanumSquareR;
     line-height: 1.68;
     text-align: left;
     color: #35465d;
@@ -133,6 +133,7 @@ body {
 }
 .section {
     margin-top: 1%;
+
 }
 .result-message {
     font-size: 1.8rem;
@@ -145,13 +146,11 @@ body {
     margin: 1%;
 }
 .title {
-    font-family: NanumSquareR;
     line-height: 1.67;
     text-align: center;
     color: #35465d;
 }
 .subtitle {
-    font-family: NanumSquareR;
     line-height: 1.53;
     text-align: center;
     color: #35465d;
@@ -165,7 +164,6 @@ body {
     }
 }
 .youtube-link {
-    font-family: NanumSquareR;
     font-size: 1.5rem;
     line-height: 1.71;
     text-align: center;
@@ -173,7 +171,6 @@ body {
     text-decoration: underline;
 }
 .youtube-link:hover {
-    font-family: NanumSquareR;
     font-size: 1.5rem;
     line-height: 1.71;
     text-align: center;
