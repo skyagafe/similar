@@ -124,6 +124,11 @@ body {
     transition: all 0.2s ease;
 }
 .addthis_inline_share_toolbox_wbpc {
+    padding: 0px 15px 0px 15px;
+    text-align: center;
+    background-color: #f6f7fa;
+}
+.ad {
     padding: 0 15px 0px 15px;
     text-align: center;
     background-color: #f6f7fa;
