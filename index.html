@@ -277,10 +277,47 @@
                     resultMessage = "헐리우드 배우 존 트라볼타와 닮은듯하지만 결국 강아지"
                     resulttype = "John Travolta"
                     break;
+                case "박신혜":
+                    resultMessage = "배우 박신혜와 닮은듯하지만 결국 댕댕이"
+                    resulttype = "Park Sinhye"
+                    break;                      
                 case "지민":
                     resultMessage = "AOA 지민과 닮은듯하지만 결국 퍼그"
                     resulttype = "Ji Min"
                     break;
+                case "한승연":
+                    resultMessage = "카라 한승연과 닮은듯하지만 결국 햄스터"
+                    resulttype = "Han Seungyeon"
+                    break;
+                case "기희현":
+                    resultMessage = "다이아 기희현과 닮은듯하지만 결국 너구리"
+                    resulttype = "Ki Huihyeon"
+                    break;    
+                case "신현준":
+                    resultMessage = "배우 신현준과 닮은듯하지만 결국 북방 바다코끼리"
+                    resulttype = "Shin Hyeonjun"
+                    break;    
+                case "양현석":
+                    resultMessage = "YG 양현석과 닮은듯하지만 결국 멍멍이"
+                    resulttype = "Yang Hyeonseok"
+                    break;
+                case "이승우":
+                    resultMessage = "축구선우 이승우와 닮은듯하지만 결국 계왕신"
+                    resulttype = "Lee Seungu"
+                    break; 
+                case "김연아":
+                    resultMessage = "피겨여왕 김연아와 닮은듯하지만 결국 엘사"
+                    resulttype = "Kim Yeona"
+                    break;
+                case "유재환":
+                    resultMessage = "작곡가 유재환과 닮은듯하지만 결국 고양이의 보은에 시녀고양이"
+                    resulttype = "Yoo Jaehwan"
+                    break;    
+                case "김숙":
+                    resultMessage = "개그우먼 김숙과 닮은듯하지만 결국 올 뉴 스포티지"
+                    resulttype = "Yoo Jaehwan"
+                    break;
+                    
                 default:
                     resultMessage = "뉘신지??"
             }
@@ -289,8 +326,9 @@
             for (let i = 0; i < maxPredictions; i++) {
                 const classPrediction =
                     prediction[i].className + " : " + Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
-                labelContainer.childNodes[0].innerHTML = classPrediction;
-                labelContainer.childNodes[-1].innerHTML = classPrediction;
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+                // labelContainer.childNodes[0].innerHTML = classPrediction;
+                // labelContainer.childNodes[-1].innerHTML = classPrediction;
             }
         }
     </script>
