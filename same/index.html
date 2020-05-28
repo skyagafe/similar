@@ -19,8 +19,8 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="same/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="same/style.css">
+    <link rel="icon" href="../same/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../same/style.css">
     <link rel="canonical" href="https://skyagafe.netlify.app/same">
     <title>닮은꼴 찾기</title>
     <meta name="title" content="닮은꼴 찾기">
@@ -78,14 +78,14 @@
         <div class="image-upload-wrap">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
             <div class="drag-text">
-                <img src="img/upload.png" class="mt-5 pt-5 upload">
+                <img src="../same/img/upload.png" class="mt-5 pt-5 upload">
                 <h3 class="mb-5 pb-5 pt-4  upload-text">얼굴 사진을 올려놓거나 눌러서 업로드하세요!</h3>
             </div>
         </div>
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" style="max-width: 50%; height: auto;" />
             <div>
-                <img class="file-upload-image2" id="face-image2" src="img/fox.jpg" style="max-width: 80%; height: auto;" />
+                <img class="file-upload-image2" id="face-image2" src="../same/img/fox.jpg" style="max-width: 80%; height: auto;" />
             </div>
             <div id="loading" class="load-wrapp">
                 <div class="load-2">
@@ -333,7 +333,7 @@
                 default:
                     resultMessage = "뉘신지??"
             }
-            $('.file-upload-image2').attr('src', "img/" + resulttype + ".jpg");
+            $('.file-upload-image2').attr('src', "../same/img/" + resulttype + ".jpg");
             $('.result-message').html(resultMessage);
             for (let i = 0; i < maxPredictions; i++) {
                 const classPrediction =
