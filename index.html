@@ -119,7 +119,7 @@
             <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
         </div>
     </div>
-    <div class="container disqus" id="disqus_thread"></div>
+    <!-- <div class="container disqus" id="disqus_thread"></div>
 
     <script>
         (function() { // DON'T EDIT BELOW THIS LINE
@@ -132,7 +132,7 @@
     </script>
     <noscript>Please enable JavaScript to view the
         <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
+    </noscript> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -260,10 +260,10 @@
             $('.file-upload-image2').attr('src', "img/" + resulttype + ".jpg");
             $('.result-message').html(resultMessage);
             $('.result-add').html(resultadd);
-            for (let i = 0; i < maxPredictions; i++) {
+            for (let i = 0; i < 3; i++) {
                 const classPrediction =
                     "AI왈 : " + prediction[i].className + "하고 얼굴이 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 만큼 닮았어요";
-                labelContainer.childNodes[i].innerHTML = classPrediction;
+                labelContainer.childNodes[i].innerHTML = classPrediction; 
             }
         }
     </script>
