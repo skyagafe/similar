@@ -17,6 +17,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-167904662-1');
     </script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -110,7 +111,7 @@
     <div class="container addthis_inline_share_toolbox_wbpc"></div>
     <div class="container youtube-link">
         <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link">제작 도움 : 조코딩 유튜브 채널</a>
-    </div>
+    </div>    
     <div class="container ad">
         <div class="kakao-ad">
             <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-1jew0z109f31z" data-ad-width="320" data-ad-height="100"></ins>
@@ -270,6 +271,43 @@
         }
     </script>
 
+        <a id="kakao-link-btn" href="javascript:sendLink()"> <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" ></a>
+ 
+<script type='text/javascript'>
+ 
+Kakao.init('b8651876188a073fb8d5ba8d884610a2');
+function sendLink() {
+    Kakao.Link.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '관상 궁합',
+          description: 'AI가 분석하는 둘의 관상 궁합',
+          imageUrl: '이미지 URL',
+          link: {
+            mobileWebUrl: 'https://skyagafe.netlify.app/',
+            webUrl: 'https://skyagafe.netlify.app/'
+          }
+        },
+        buttons: [
+          {
+            title: '웹으로 보기',
+            link: {
+              mobileWebUrl: 'https://skyagafe.netlify.app/',
+              webUrl: 'https://skyagafe.netlify.app/'
+            }
+          },
+          {
+            title: '앱으로 보기',
+            link: {
+              mobileWebUrl: 'https://skyagafe.netlify.app/',
+              webUrl: 'https://skyagafe.netlify.app/'
+            }
+          }
+        ]
+    });
+}
+    </script>
+    
 </body>
 <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
