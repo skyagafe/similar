@@ -158,12 +158,17 @@ body {
     margin-top: 1%;
 }
 .result-message {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: #e56995;
     margin: 1%;
 }
-.label-con {
+.result-add {
     font-size: 1.5rem;
+    color: #31849B;
+    margin: 1%;
+}
+.label-con {
+    font-size: 1.3rem;
     color: #007bff;
     margin: 1%;
 }
