@@ -210,47 +210,47 @@
             var same = "";
             switch (prediction[0].className) {
                 case "수호":
-                    resultMessage = "엑소 멤버 중 수호와의 관상 궁합이 제일 좋네요"
+                    resultMessage = "엑소 멤버들 중 수호와의 관상 궁합이 제일 좋네요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "Su Ho"
                     break;
                 case "찬열":
-                    resultMessage = "엑소 멤버 중 찬열과의 관상 궁합이 제일 좋아요"
+                    resultMessage = "엑소 멤버들 중 찬열과의 관상 궁합이 제일 좋아요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "Chanyeol"
                     break;
                 case "카이":
-                    resultMessage = "엑소 멤버 중 카이와의 관상 궁합이 제일 좋아요"
+                    resultMessage = "엑소 멤버들 중 카이와의 관상 궁합이 제일 좋아요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "kai"
                     break;
                 case "디오":
-                    resultMessage = "엑소 멤버 중 디오와의 관상 궁합이 제일 좋아요"
+                    resultMessage = "엑소 멤버들 중 디오와의 관상 궁합이 제일 좋아요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "dio"
                     break;
                 case "백현":
-                    resultMessage = "엑소 멤버 중 백현과의 관상 궁합이 제일 좋아요"
+                    resultMessage = "엑소 멤버들 중 백현과의 관상 궁합이 제일 좋아요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "Baek Hyeon"
                     break;
                 case "세훈":
-                    resultMessage = "엑소 멤버 중 세훈과의 관상 궁합이 제일 좋아요"
+                    resultMessage = "엑소 멤버들 중 세훈과의 관상 궁합이 제일 좋아요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "Sehun"
                     break;
                 case "시우민":
-                    resultMessage = "엑소 멤버 중 시우민과의 관상 궁합이 제일 좋아요"
+                    resultMessage = "엑소 멤버들 중 시우민과의 관상 궁합이 제일 좋아요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "Si Umin"
                     break;
                 case "첸":
-                    resultMessage = "엑소 멤버 중 첸과의 관상 궁합이 제일 좋아요"
+                    resultMessage = "엑소 멤버들 중 첸과의 관상 궁합이 제일 좋아요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "chen"
                     break;
                 case "레이":
-                    resultMessage = "엑소 멤버 중 레이와의 관상 궁합이 제일 좋아요"
+                    resultMessage = "엑소 멤버들 중 레이와의 관상 궁합이 제일 좋아요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "lay"
                     break;
@@ -262,8 +262,8 @@
             $('.result-add').html(resultadd);
             for (let i = 0; i < 3; i++) {
                 const classPrediction =
-                    "AI왈 : " + prediction[i].className + "하고 얼굴이 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 만큼 닮았어요";
-                labelContainer.childNodes[i].innerHTML = classPrediction; 
+                   i+1 + "위 : " + prediction[i].className + "하고 얼굴이 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 만큼 닮았어요";
+                labelContainer.childNodes[i].innerHTML = classPrediction;
             }
         }
     </script>
