@@ -97,7 +97,7 @@ body {
     max-width: 700px;
     margin: auto;
     border-radius: 25px;
-    padding: 2%;
+    padding: 1%;
     background-size: contain;
 }
 .remove-image {
@@ -160,12 +160,12 @@ body {
 .result-message {
     font-size: 1.7rem;
     color: #e56995;
-    margin: 1%;
+    margin: 0 1%;
 }
 .result-add {
     font-size: 1.5rem;
     color: #31849B;
-    margin: 1%;
+    margin: 0 1%;
 }
 .label-con {
     font-size: 1.3rem;
