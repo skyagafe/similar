@@ -1,4 +1,22 @@
 body {background:#ccc}
+.box h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 92px;
+  background:#FFF;
+  padding: 20px 50px;
+  text-align: center;
+  position:relative;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+h1.insetshadow {
+  color: #202020;
+  text-align: center;
+  position:relative;
+  background-color: #ccc;
+  letter-spacing: 0.1em;
+  text-shadow: -1px -1px 1px #111, 2px 2px 1px #fff;
+}    
 .box h3{
   text-align:center;
 	position:relative;
