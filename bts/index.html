@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../same/style.css">
+    <link rel="stylesheet" href="../bts/css/style.css">
     <link rel="canonical" href="https://skyagafe.netlify.app/">
     <title>인공지능 관상궁합</title>
     <meta name="title" content="인공지능 관상 궁합">
@@ -42,9 +42,38 @@
 
 <body>
 
+    <section class="container d-flex flex-column justify-content-center align-items-center">
+        <span class="select-language">Language</span>
+        <select onchange="changeLanguage(this)" class="custom-select col-8">
+            <option value="ko" lang="ko">한국어</option>
+            <option value="en" lang="en">English</option>
+            <!-- <option value="es" lang="es">español</option>
+            <option value="ja" lang="ja">日本語</option>
+            <option value="zh" lang="zh">中文</option>
+            <option value="vi" lang="vi">tiếng Việt</option>
+            <option value="id" lang="id">Bahasa Indonesia</option> -->
+        </select>
+    </section>
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+
+        function changeLanguage(lang) {
+            if ((navigator.userAgent.indexOf('Mac OS') > 0 && navigator.userAgent.indexOf('Safari') <= 0) || ((navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('wv)') > 0))) {
+                if (ua.match('android') != null) {
+                    window.open("googlechrome://navigate?url=skyagafe.netlify.app/" + lang.value + "/index.html"); //android
+                } else if (ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1 || ua.indexOf("ipod") > -1) {
+                    window.location.href = "https://skyagafe.netlify.app/" + lang.value + "/index.html";
+                } else {
+                    window.location.href = "https://skyagafe.netlify.app/" + lang.value + "/index.html";
+                }
+            } else {
+                window.location.href = "https:/skyagafe.netlify.app/" + lang.value + "/index.html";
+            }
+        }
+    </script>
     <section class="section">
-        <h1 class="title">결국 당신이 닮은것은?</h1>
-        <h2 class="subtitle"></h2>
+        <div class="title">인공지능이 분석하는 EXO 멤버들과의 관상궁합은?</div>
+        <div class="subtitle">%가 높을수록 궁합이 좋아요</div>
     </section>
 
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -52,14 +81,16 @@
         <div class="image-upload-wrap">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
             <div class="drag-text">
-                <img src="../same/img/upload.png" class="mt-5 pt-5 upload">
-                <h3 class="mb-5 pb-5 pt-4  upload-text">얼굴 사진을 올려놓거나 눌러서 업로드하세요!</h3>
+                <img src="../bts/img/upload.png" class="mt-5 pt-5 upload">
+                <h3 class="mb-5 pb-5 pt-4  upload-text">얼굴 사진을 올려놓거나
+                    <br>사진 이미지를 눌러서
+                    <br>업로드하세요!</h3>
             </div>
         </div>
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" style="max-width: 50%; height: auto;" />
             <div>
-                <img class="file-upload-image2" id="face-image2" src="../same/img/fox.jpg" style="max-width: 80%; height: auto;" />
+                <img class="file-upload-image2" id="face-image2" src="../bts/img/fox.jpg" style="max-width: 80%; height: auto;" />
             </div>
             <div id="loading" class="load-wrapp">
                 <div class="load-2">
@@ -67,12 +98,13 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <p class="text-center">AI가 당신의 닮은꼴을 찾는중입니다.</p>
+                <p class="text-center">AI가 관상을 분석 중입니다</p>
             </div>
             <div class="result-message"></div>
+            <div class="result-add"></div>
             <div class="label-con" id="label-container"></div>
             <div class="image-title-wrap">
-                <button type="button" class="remove-image" onclick="javascript:location.replace('https://skyagafe.netlify.app/same');">다시하기
+                <button type="button" class="remove-image" onclick="javascript:location.replace('https://skyagafe.netlify.app/bts');">다시하기
                 </button>
             </div>
 
@@ -80,7 +112,7 @@
 
     </div>
     <div id="webcam-container"></div>
-    <div class="container addthis_inline_share_toolbox_lngf"></div>
+    <div class="container addthis_inline_share_toolbox_uufo"></div>
     <div class="container youtube-link">
         <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link">제작 도움 : 조코딩 유튜브 채널</a>
     </div>
@@ -93,6 +125,11 @@
             <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-r1l6yh9mwcok" data-ad-width="300" data-ad-height="250"></ins>
             <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
         </div>
+    </div>
+    <div class="container footer">
+        <a>Pictures and data are not stored on the server</a>
+        <div>사진은 서버에 저장되지 않으니 안심하고 이용하세요</div>
+        <a>a.k.a roy</a>
     </div>
     <!-- <div class="container disqus" id="disqus_thread"></div>
 
@@ -157,7 +194,7 @@
         // More API functions here:
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
         // the link to your model provided by Teachable Machine export panel
-        const URL = "https://teachablemachine.withgoogle.com/models/iipScEtkg/";
+        const URL = "https://teachablemachine.withgoogle.com/models/vX0MX8v_l/";
         let model, webcam, labelContainer, maxPredictions;
         // Load the image model and setup the webcam
         async function init() {
@@ -181,142 +218,80 @@
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
             console.log(prediction[0].className);
-            var resultMessage, resulttype;
+            var resultMessage, resulttype, resultadd;
             var same = "";
             switch (prediction[0].className) {
-                case "Adam Driver":
-                    resultMessage = "스타워즈 아담 드라이버와 닮은듯하지만 결국 고양이~"
-                    resulttype = "Adam Driver";
+                case "수호":
+                    resultMessage = "엑소 멤버들 중 수호와의 관상 궁합이 제일 좋네요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "Su Ho"
                     break;
-                case "김나은":
-                    resultMessage = "탤런트 김나은과 닮은듯하지만 결국 탁구공~"
-                    resulttype = "Kim Naeun"
+                case "찬열":
+                    resultMessage = "엑소 멤버들 중 찬열과의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "Chanyeol"
                     break;
-                case "나연":
-                    resultMessage = "트와이스 나연과 닮은듯하지만 결국 토끼!"
-                    resulttype = "Na Yeon"
+                case "카이":
+                    resultMessage = "엑소 멤버들 중 카이와의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "kai"
                     break;
-                case "Nicolas Cage":
-                    resultMessage = "케서방 니콜라스 케이지와닮은듯 하지만 결국 고양이"
-                    resulttype = "Nicolas Cage"
+                case "디오":
+                    resultMessage = "엑소 멤버들 중 디오와의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "dio"
                     break;
-                case "Donald Trump":
-                    resultMessage = "미국 대통령 도널드 트럼프와 닮은듯하지만 결국 고양이"
-                    resulttype = "Donald Trump"
+                case "백현":
+                    resultMessage = "엑소 멤버들 중 백현과의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "Baek Hyeon"
                     break;
-                case "Rafael Nadal":
-                    resultMessage = "테니스 선수 라파엘나달과 닮은듯하지만 결국 카피바라~"
-                    resulttype = "Rafael Nadal"
+                case "세훈":
+                    resultMessage = "엑소 멤버들 중 세훈과의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "Sehun"
                     break;
-                case "박미선":
-                    resultMessage = "개그우먼 박미선과 닮은듯하지만 결국 신데렐라 언니"
-                    resulttype = "Park Miseon"
+                case "시우민":
+                    resultMessage = "엑소 멤버들 중 시우민과의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "Si Umin"
                     break;
-                case "박신양":
-                    resultMessage = "파리의 연인 박신양과 닮은듯하지만 결국 라디오"
-                    resulttype = "Park Sinyang"
+                case "첸":
+                    resultMessage = "엑소 멤버들 중 첸과의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "chen"
                     break;
-                case "백일섭":
-                    resultMessage = "꽃보다 할배 백일섭과 닮은듯하지만 결국 배추"
-                    resulttype = "Paik Ilseop"
-                    break;
-                case "백종원":
-                    resultMessage = "맛있쥬? 백종원과 닮은듯하지만 결국 치와와"
-                    resulttype = "Paik Jongwon"
-                    break;
-                case "소희":
-                    resultMessage = "만두 소희와 닮은듯하지만 결국 고양이"
-                    resulttype = "So Hui"
-                    break;
-                case "Snoop Dogg":
-                    resultMessage = "도기도기 스눕 독과 닮은듯하지만 결국 그레이 하운드"
-                    resulttype = "Snoop Dogg"
-                    break;
-                case "엠버":
-                    resultMessage = "보이쉬한 엠버와 닮은듯하지만 결국 라마"
-                    resulttype = "Amber"
-                    break;
-                case "이윤석":
-                    resultMessage = "가냘픈 이윤석과 닮은듯하지만 결국 연필"
-                    resulttype = "Lee Yunseok"
-                    break;
-                case "이종혁":
-                    resultMessage = "머리빨 이종혁과 닮은듯하지만 결국 라마"
-                    resulttype = "Lee Jonghyeok"
-                    break;
-                case "이회창":
-                    resultMessage = "정치인 이회창과 닮은듯하지만 결국 회"
-                    resulttype = "Lee Hoechang"
-                    break;
-                case "Jack Black":
-                    resultMessage = "눈 부릅 잭 블랙과 닮은듯하지만 결국 고양이"
-                    resulttype = "Jack Black"
-                    break;
-                case "Justin Timberlake":
-                    resultMessage = "면발 머리 저스틴 팀버레이크와 닮은듯하지만 결국 곱슬개"
-                    resulttype = "Justin Timberlake"
-                    break;
-                case "조우진":
-                    resultMessage = "연기자 조우진과 닮은듯하지만 결국 짱구에 나오는 캐릭"
-                    resulttype = "Cho Ujin"
-                    break;
-                case "John Travolta":
-                    resultMessage = "헐리우드 배우 존 트라볼타와 닮은듯하지만 결국 강아지"
-                    resulttype = "John Travolta"
-                    break;
-                case "박신혜":
-                    resultMessage = "배우 박신혜와 닮은듯하지만 결국 댕댕이"
-                    resulttype = "Park Sinhye"
-                    break;
-                case "지민":
-                    resultMessage = "AOA 지민과 닮은듯하지만 결국 퍼그"
-                    resulttype = "Ji Min"
-                    break;
-                case "한승연":
-                    resultMessage = "카라 한승연과 닮은듯하지만 결국 햄스터"
-                    resulttype = "Han Seungyeon"
-                    break;
-                case "기희현":
-                    resultMessage = "다이아 기희현과 닮은듯하지만 결국 너구리"
-                    resulttype = "Ki Huihyeon"
-                    break;
-                case "신현준":
-                    resultMessage = "배우 신현준과 닮은듯하지만 결국 북방 바다코끼리"
-                    resulttype = "Shin Hyeonjun"
-                    break;
-                case "양현석":
-                    resultMessage = "YG 양현석과 닮은듯하지만 결국 멍멍이"
-                    resulttype = "Yang Hyeonseok"
-                    break;
-                case "이승우":
-                    resultMessage = "축구선우 이승우와 닮은듯하지만 결국 계왕신"
-                    resulttype = "Lee Seungu"
-                    break;
-                case "김연아":
-                    resultMessage = "피겨여왕 김연아와 닮은듯하지만 결국 엘사"
-                    resulttype = "Kim Yeona"
-                    break;
-                case "유재환":
-                    resultMessage = "작곡가 유재환과 닮은듯하지만 결국 고양이의 보은의 시녀고양이"
-                    resulttype = "Yoo Jaehwan"
-                    break;
-                case "김숙":
-                    resultMessage = "개그우먼 김숙과 닮은듯하지만 결국 올 뉴 스포티지"
-                    resulttype = "Kim Suk"
+                case "레이":
+                    resultMessage = "엑소 멤버들 중 레이와의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "lay"
                     break;
                 default:
-                    resultMessage = "뉘신지??"
+                    resultMessage = "이게뭐징??"
             }
-            $('.file-upload-image2').attr('src', "../same/img/" + resulttype + ".jpg");
+            $('.file-upload-image2').attr('src', "../bts/img/" + resulttype + ".jpg");
             $('.result-message').html(resultMessage);
-            for (let i = 0; i < maxPredictions; i++) {
+            $('.result-add').html(resultadd);
+            for (let i = 0; i < 3; i++) {
                 const classPrediction =
-                    "AI왈 : " + prediction[i].className + " 얼굴의 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 정도만 닮음";
-                labelContainer.childNodes[0].innerHTML = classPrediction;
-                labelContainer.childNodes[-1].innerHTML = classPrediction;
+                    i + 1 + "위 : " + prediction[i].className + "하고 얼굴이 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 만큼 닮았어요";
+                labelContainer.childNodes[i].innerHTML = classPrediction;
             }
         }
     </script>
+
+    <!-- KakaoTalk Share Script -->
+    <!-- <script>
+    
+    <a href="javascript:shareKatalk()"><img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"></a>
+Kakao.init('b8651876188a073fb8d5ba8d884610a2');
+
+function shareKatalk() {
+Kakao.Link.sendScrap({
+    requestUrl: location.href
+});
+};
+</script> -->
 
 </body>
 <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)

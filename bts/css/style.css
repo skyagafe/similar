@@ -1,0 +1,364 @@
+body {
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: #ffffff; 
+}
+.countsort{
+	position : relative;
+	width : 100%;
+	height : 0;
+	padding-bottom : 5%;
+}
+.file-upload {
+    padding: 1.3% 3%;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: solid 1.5px #f6f7fa;
+    background-color: #f6f7fa;
+}
+.disqus {
+    padding: 3% 3%;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid 1.5px #f6f7fa;
+    background-color: #f6f7fa;
+}
+.p-3 {
+    padding: 1rem!important;
+}
+.file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #1fb264;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #15824b;
+    transition: all 0.2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.file-upload-btn:hover {
+    background: #1aa059;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.file-upload-btn:active {
+    border: 0;
+    transition: all 0.2s ease;
+}
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+.image-upload-wrap {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 10px;
+    border: dashed 1.5px #35465d;
+    background-color: #ffffff;
+}
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #35465d82;
+    border: 1.5px dashed #ffffff;
+}
+.image-title-wrap {
+    padding: 10px 15px 10px 15px;
+    color: #222;
+}
+.drag-text {
+    text-align: center;
+}
+.drag-text h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+.file-upload-image {
+    max-height: 200px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    background-size: contain;
+}
+.file-upload-image2 {
+    max-height: 350px;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 25px;
+    padding: 1%;
+    background-size: contain;
+}
+.remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.remove-image:active {
+    border: 0;
+    transition: all 0.2s ease;
+}
+.addthis_inline_share_toolbox_uufo {
+    padding: 0px 15px 0px 15px;
+    text-align: center;
+    background-color: #f6f7fa;
+}
+.ad {
+    padding: 0 15px 0px 15px;
+    text-align: center;
+    background-color: #f6f7fa;
+}
+.kakao-ad {
+    text-align: center;
+    width: 320px; 
+    margin: 0 auto;
+}
+.kakao-adtwo {
+    text-align: center;
+    width: 300px; 
+    margin: 0 auto;
+}
+.nav-distance {
+    padding: 2.1% 7.7%;
+}
+.navbar-light .navbar-brand {
+    line-height: 1.68;
+    text-align: left;
+    color: #35465d;
+}
+.navbar-light .navbar-toggler {
+    border-color: #ffffff;
+}
+.section {
+    margin-top: 1%;
+}
+.result-message {
+    font-size: 1.7rem;
+    color: #e56995;
+    margin: 0 1%;
+}
+.result-add {
+    font-size: 1.5rem;
+    color: #31849B;
+    margin: 0 1%;
+}
+.label-con {
+    font-size: 1.3rem;
+    color: #007bff;
+    margin: 1%;
+}
+.title {
+    text-align: center;
+    font-size: 1.7rem;
+    margin 30px 0px 0px;
+    color: #35465d;
+}
+.subtitle {
+    font-size: 1.7rem;
+    text-align: center;
+    color: #35465d;
+} /* On screens that are 600px or less, set the background color to olive */
+.footer {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #35465d;
+}
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+.youtube-link {
+    font-size: 1.1rem;
+    line-height: 1.71;
+    text-align: center;
+    color: #f73737;
+    text-decoration: underline;
+    background-color: #f6f7fa;
+    padding: 5px 0 10px 0;
+}
+.youtube-link:hover {
+    font-size: 1.1rem;
+    line-height: 1.71;
+    text-align: center;
+    color: #f73737;
+    text-decoration: underline;
+}
+.load-wrapp {
+    margin: 0 10px 10px 0;
+    padding: 20px 20px 20px;
+    text-align: center;
+}
+.line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #4b9cdb;
+}
+.load-2 .line:nth-last-child(1) {
+    animation: loadingB 1.5s 1s infinite;
+}
+.load-2 .line:nth-last-child(2) {
+    animation: loadingB 1.5s 0.5s infinite;
+}
+.load-2 .line:nth-last-child(3) {
+    animation: loadingB 1.5s 0s infinite;
+}
+.youtube-icon {
+    width: 8%;
+}
+.upload {
+    width: 20%;
+}
+.upload-text {
+    width: 58%;
+    font-family: NanumSquareR;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+@keyframes loadingA {
+    0 {
+        height: 15px;
+    }
+    50% {
+        height: 35px;
+    }
+    100% {
+        height: 15px;
+    }
+}
+@keyframes loadingB {
+    0 {
+        width: 15px;
+    }
+    50% {
+        width: 35px;
+    }
+    100% {
+        width: 15px;
+    }
+}
+@keyframes loadingC {
+    0 {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 15px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes loadingD {
+    0 {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loadingE {
+    0 {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loadingF {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes loadingG {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(70px, 0) rotate(360deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+@keyframes loadingH {
+    0% {
+        width: 15px;
+    }
+    50% {
+        width: 35px;
+        padding: 4px;
+    }
+    100% {
+        width: 15px;
+    }
+}
+@keyframes loadingI {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes bounce {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+@keyframes loadingJ {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(80px, 0);
+        background-color: #f5634a;
+        width: 25px;
+    }
+}
