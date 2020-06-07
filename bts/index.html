@@ -221,16 +221,40 @@
             var same = "";
             switch (prediction[0].className) {
                 case "RM":
-                    resultMessage = "엑소 멤버들 중 RM과의 관상 궁합이 제일 좋네요"
+                    resultMessage = "BTS 멤버들 중 RM과의 관상 궁합이 제일 좋네요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "RM"
                     break;
                 case "Jin":
-                    resultMessage = "엑소 멤버들 중 Jin과의 관상 궁합이 제일 좋아요"
+                    resultMessage = "BTS 멤버들 중 Jin과의 관상 궁합이 제일 좋아요"
                     resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
                     resulttype = "jin"
                     break;
-                
+                case "Suga":
+                    resultMessage = "BTS 멤버들 중 Suga와의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "Suga"
+                    break;
+                case "JHope":
+                    resultMessage = "BTS 멤버들 중 JHope과의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "JHope"
+                    break;
+                case "v":
+                    resultMessage = "BTS 멤버들 중 v과의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "v"
+                    break;
+                case "JiMin":
+                    resultMessage = "BTS 멤버들 중 JiMin과의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "JiMin"
+                    break
+                case "JungKook":
+                    resultMessage = "BTS 멤버들 중 JungKook과의 관상 궁합이 제일 좋아요"
+                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resulttype = "JungKook"
+                    break   
                 default:
                     resultMessage = "이게뭐징??"
             }
@@ -239,7 +263,7 @@
             $('.result-add').html(resultadd);
             for (let i = 0; i < 3; i++) {
                 const classPrediction =
-                    i + 1 + "위 : " + prediction[i].className + "하고 얼굴이 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 만큼 닮았어요";
+                    "No." + (i + 1) + " : " + prediction[i].className + "하고 얼굴이 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 만큼 닮았어요";
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
         }

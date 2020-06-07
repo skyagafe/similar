@@ -273,7 +273,7 @@
             $('.result-add').html(resultadd);
             for (let i = 0; i < 3; i++) {
                 const classPrediction =
-                    i + 1 + "위 : " + prediction[i].className + "하고 얼굴이 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 만큼 닮았어요";
+                     "No." + (i + 1) + " : " + prediction[i].className + "하고 얼굴이 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 만큼 닮았어요";
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
         }
