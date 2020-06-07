@@ -23,12 +23,12 @@ h1.insetshadow {
 .box h3 {
     text-align: center;
     position: relative;
-    top: 30px;
+    top: 35px;
 }
 .box {
     width: 70%;
     height: 100px;
-    background: #fff;
+    background: #8f8f8f;
     margin: 15px auto;
 }
 .kakao-ad {
