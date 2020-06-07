@@ -123,7 +123,7 @@ body {
     border: 0;
     transition: all 0.2s ease;
 }
-.addthis_inline_share_toolbox_lngf {
+.addthis_inline_share_toolbox_uufo {
     padding: 0px 15px 0px 15px;
     text-align: center;
     background-color: #f6f7fa;
@@ -142,6 +142,11 @@ body {
     text-align: center;
     width: 300px; 
     margin: 0 auto;
+}
+.footer {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #35465d;
 }
 .nav-distance {
     padding: 2.1% 7.7%;
