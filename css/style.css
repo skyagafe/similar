@@ -1,16 +1,21 @@
 body {
-    font-family: 'Do Hyeon', sans-serif;
+        font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic',
+        sans-serif;
     background-color: #ffffff;
 }
-</style > .nav-distance {
+</style > 
+.nav-distance {
+        font-family: 'Do Hyeon', sans-serif;
     padding: 2.1% 7.7%;
 }
 .navbar-light .navbar-brand {
+        font-family: 'Do Hyeon', sans-serif;
     line-height: 1.68;
     text-align: left;
     color: #35465d;
 }
 .navbar-light .navbar-toggler {
+        font-family: 'Do Hyeon', sans-serif;
     border-color: #ffffff;
 }
 .pulse:hover,
@@ -20,23 +25,20 @@ body {
     box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
 }
 .box h1 {
-    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic',
-        sans-serif;
-    font-size: 92px;
-    background: #fff;
-    padding: 20px 50px;
     text-align: center;
     position: relative;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
+    top: 80px;
 }
-h1.insetshadow {
-    color: #202020;
+h1.deepshadow {
+    color: #e0dfdc;
+    background-color: #333;
+    margin: 0px 0px 30px;
+    font-size: 2.3rem;
     text-align: center;
-    position: relative;
-    background-color: #ccc;
-    letter-spacing: 0.1em;
-    text-shadow: -1px -1px 1px #111, 2px 2px 1px #fff;
+    line-height: 2;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828,
+        0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e,
+        0 10px 0 #1c1c1c;
 }
 .box h3 {
     text-align: center;
@@ -46,7 +48,7 @@ h1.insetshadow {
 .box {
     width: 70%;
     height: 100px;
-    background: #8f8f8f;
+    background: #ffbb05;
     margin: 15px auto;
 }
 .kakao-ad {
@@ -330,4 +332,3 @@ button {
     margin: 0.5em;
     padding: 1em 2em;
 }
-
