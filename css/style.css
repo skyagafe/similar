@@ -1,22 +1,26 @@
 body {
-        font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic',
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic',
         sans-serif;
     background-color: #ffffff;
 }
-</style > 
-.nav-distance {
-        font-family: 'Do Hyeon', sans-serif;
+</style > .nav-distance {
+    font-family: 'Do Hyeon', sans-serif;
     padding: 2.1% 7.7%;
 }
 .navbar-light .navbar-brand {
-        font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
     line-height: 1.68;
     text-align: left;
     color: #35465d;
 }
 .navbar-light .navbar-toggler {
-        font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
     border-color: #ffffff;
+}
+.footer {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #35465d;
 }
 .pulse:hover,
 .pulse:focus {
