@@ -165,6 +165,7 @@ body {
 }
 .result-message {
     font-size: 1.7rem;
+    text-align: center;
     color: #e56995;
     margin: 0 1%;
 }
