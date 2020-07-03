@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../bts/css/style.css">
+    <link rel="stylesheet" href="../../bts/css/style.css">
     <link rel="canonical" href="https://skyagafe.netlify.app/">
     <title>인공지능 관상궁합</title>
     <meta name="title" content="인공지능 관상 궁합">
@@ -72,8 +72,8 @@
     <section class="container d-flex flex-column justify-content-center align-items-center">
         <span class="select-language">Language</span>
         <select onchange="changeLanguage(this)" class="custom-select col-8">
-            <option value="ko" lang="ko">한국어</option>
             <option value="en" lang="en">English</option>
+            <option value="ko" lang="ko">한국어</option>
             <!-- <option value="es" lang="es">español</option>
             <option value="ja" lang="ja">日本語</option>
             <option value="zh" lang="zh">中文</option>
@@ -89,18 +89,18 @@
                 if (ua.match('android') != null) {
                     window.open("googlechrome://navigate?url=skyagafe.netlify.app/" + lang.value + "/index.html"); //android
                 } else if (ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1 || ua.indexOf("ipod") > -1) {
-                    window.location.href = "https://skyagafe.netlify.app/" + lang.value + "/index.html";
+                    window.location.href = "https://skyagafe.netlify.app/bts/" + lang.value + "/index.html";
                 } else {
-                    window.location.href = "https://skyagafe.netlify.app/" + lang.value + "/index.html";
+                    window.location.href = "https://skyagafe.netlify.app/bts/" + lang.value + "/index.html";
                 }
             } else {
-                window.location.href = "https:/skyagafe.netlify.app/" + lang.value + "/index.html";
+                window.location.href = "https:/skyagafe.netlify.app/bts/" + lang.value + "/index.html";
             }
         }
     </script>
     <section class="section">
-        <div class="title">인공지능이 분석하는 BTS 멤버들과의 관상궁합은?</div>
-        <div class="subtitle">%가 높을수록 궁합이 좋아요</div>
+        <div class="title">What would be the physiognomy and marital compatibility of BTS members analyzed and predicted by AI?</div>
+        <div class="subtitle">If the percentage is higher, the marital compatibility becomes better.</div>
     </section>
 
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -108,15 +108,15 @@
         <div class="image-upload-wrap">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
             <div class="drag-text">
-                <img src="../bts/img/upload.png" class="mt-5 pt-5 upload">
-                <h3 class="mb-5 pb-5 pt-4  upload-text">얼굴 사진을 올려놓거나
-                    <br>화면을 눌러서 업로드하세요!</h3>
+                <img src="../../bts/img/upload.png" class="mt-5 pt-5 upload">
+                <h3 class="mb-5 pb-5 pt-4  upload-text">Put your face picture on it
+                    <br>or upload it by clicking the page!</h3>
             </div>
         </div>
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" style="max-width: 50%; height: auto;" />
             <div>
-                <img class="file-upload-image2" id="face-image2" src="../bts/img/fox.jpg" style="max-width: 80%; height: auto;" />
+                <img class="file-upload-image2" id="face-image2" src="../../bts/img/fox.jpg" style="max-width: 80%; height: auto;" />
             </div>
             <div id="loading" class="load-wrapp">
                 <div class="load-2">
@@ -124,13 +124,13 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <p class="text-center">AI가 관상을 분석 중입니다</p>
+                <p class="text-center">AI is analyzing it</p>
             </div>
             <div class="result-message"></div>
             <div class="result-add"></div>
             <div class="label-con" id="label-container"></div>
             <div class="image-title-wrap">
-                <button type="button" class="remove-image" onclick="javascript:location.replace('https://skyagafe.netlify.app/bts');">다시하기
+                <button type="button" class="remove-image" onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/en');">Retry
                 </button>
             </div>
 
@@ -238,49 +238,49 @@
             var same = "";
             switch (prediction[0].className) {
                 case "RM":
-                    resultMessage = "BTS 멤버들 중 RM과의 관상 궁합이 제일 좋네요"
-                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resultMessage = "You would be a good pair with RM of BTS"
+                    resultadd = "There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven."
                     resulttype = "RM"
                     break;
                 case "Jin":
-                    resultMessage = "BTS 멤버들 중 Jin과의 관상 궁합이 제일 좋아요"
-                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resultMessage = "You would be a good pair with Jin of BTS"
+                    resultadd = "There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven."
                     resulttype = "jin"
                     break;
                 case "Suga":
-                    resultMessage = "BTS 멤버들 중 Suga와의 관상 궁합이 제일 좋아요"
-                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resultMessage = "You would be a good pair with Suga of BTS"
+                    resultadd = "There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven."
                     resulttype = "Suga"
                     break;
                 case "JHope":
-                    resultMessage = "BTS 멤버들 중 JHope과의 관상 궁합이 제일 좋아요"
-                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resultMessage = "You would be a good pair with JHope of BTS"
+                    resultadd = "There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven."
                     resulttype = "JHope"
                     break;
                 case "v":
-                    resultMessage = "BTS 멤버들 중 v과의 관상 궁합이 제일 좋아요"
-                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resultMessage = "You would be a good pair with V of BTS"
+                    resultadd = "There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven."
                     resulttype = "v"
                     break;
                 case "JiMin":
-                    resultMessage = "BTS 멤버들 중 JiMin과의 관상 궁합이 제일 좋아요"
-                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resultMessage = "You would be a good pair with JiMin of BTS"
+                    resultadd = "There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven."
                     resulttype = "JiMin"
                     break
                 case "JungKook":
-                    resultMessage = "BTS 멤버들 중 JungKook과의 관상 궁합이 제일 좋아요"
-                    resultadd = "부부는 닮는다고 하죠? 90%가 넘으면 천생연분"
+                    resultMessage = "You would be a good pair with JungKook of BTS"
+                    resultadd = "There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven."
                     resulttype = "JungKook"
                     break
                 default:
-                    resultMessage = "이게뭐징??"
+                    resultMessage = "what the??"
             }
-            $('.file-upload-image2').attr('src', "../bts/img/" + resulttype + ".jpg");
+            $('.file-upload-image2').attr('src', "../../bts/img/" + resulttype + ".jpg");
             $('.result-message').html(resultMessage);
             $('.result-add').html(resultadd);
             for (let i = 0; i < 3; i++) {
                 const classPrediction =
-                    "No." + (i + 1) + " : " + prediction[i].className + "하고 얼굴이 " + Math.round(prediction[i].probability.toFixed(2) * 100) + "% 만큼 닮았어요";
+                    "No." + (i + 1) + " : " + "You resemble" + prediction[i].className + "by" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
         }
