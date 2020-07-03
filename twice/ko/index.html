@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../twice/css/style.css">
+    <link rel="stylesheet" href="../../twice/css/style.css">
     <link rel="canonical" href="https://skyagafe.netlify.app/">
     <title>인공지능 관상궁합</title>
     <meta name="title" content="인공지능 관상 궁합">
@@ -82,21 +82,35 @@
         </select>
     </section>
     <script>
-        var ua = navigator.userAgent.toLowerCase();
-
-        function changeLanguage(lang) {
-            if ((navigator.userAgent.indexOf('Mac OS') > 0 && navigator.userAgent.indexOf('Safari') <= 0) || ((navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('wv)') > 0))) {
-                if (ua.match('android') != null) {
-                    window.open("googlechrome://navigate?url=skyagafe.netlify.app/" + lang.value + "/index.html"); //android
-                } else if (ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1 || ua.indexOf("ipod") > -1) {
-                    window.location.href = "https://skyagafe.netlify.app/" + lang.value + "/index.html";
+            var ua = navigator.userAgent.toLowerCase();
+            function changeLanguage(lang) {
+                if (
+                    (navigator.userAgent.indexOf('Mac OS') > 0 &&
+                        navigator.userAgent.indexOf('Safari') <= 0) ||
+                    (navigator.userAgent.indexOf('Android') > 0 &&
+                        navigator.userAgent.indexOf('wv)') > 0)
+                ) {
+                    if (ua.match('android') != null) {
+                        window.open(
+                            'googlechrome://navigate?url=skyagafe.netlify.app/twice/' +
+                                lang.value +
+                                '/index.html'
+                        ); //android
+                    } else if (
+                        ua.indexOf('iphone') > -1 ||
+                        ua.indexOf('ipad') > -1 ||
+                        ua.indexOf('ipod') > -1
+                    ) {
+                        window.location.href =
+                            'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
+                    } else {
+                        window.location.href =
+                            'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
+                    }
                 } else {
-                    window.location.href = "https://skyagafe.netlify.app/" + lang.value + "/index.html";
+                    window.location.href = 'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
                 }
-            } else {
-                window.location.href = "https:/skyagafe.netlify.app/" + lang.value + "/index.html";
             }
-        }
     </script>
     <section class="section">
         <div class="title">인공지능이 분석하는 TWICE 멤버들과의 관상궁합은?</div>
@@ -108,7 +122,7 @@
         <div class="image-upload-wrap">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
             <div class="drag-text">
-                <img src="../twice/img/upload.png" class="mt-5 pt-5 upload">
+                <img src="../../twice/img/upload.png" class="mt-5 pt-5 upload">
                 <h3 class="mb-5 pb-5 pt-4  upload-text">얼굴 사진을 올려놓거나
                     <br>화면을 눌러서 업로드하세요!</h3>
             </div>
@@ -116,7 +130,7 @@
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" style="max-width: 50%; height: auto;" />
             <div>
-                <img class="file-upload-image2" id="face-image2" src="../twice/img/fox.jpg" style="max-width: 80%; height: auto;" />
+                <img class="file-upload-image2" id="face-image2" src="../../twice/img/fox.jpg" style="max-width: 80%; height: auto;" />
             </div>
             <div id="loading" class="load-wrapp">
                 <div class="load-2">
@@ -284,7 +298,7 @@
                 default:
                     resultMessage = "이게뭐징??"
             }
-            $('.file-upload-image2').attr('src', "../twice/img/" + resulttype + ".jpg");
+            $('.file-upload-image2').attr('src', "../../twice/img/" + resulttype + ".jpg");
             $('.result-message').html(resultMessage);
             $('.result-add').html(resultadd);
             for (let i = 0; i < 3; i++) {

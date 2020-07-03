@@ -32,7 +32,7 @@
         />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="../../exo/css/style.css" />
+        <link rel="stylesheet" href="../../twice/css/style.css" />
         <link rel="canonical" href="https://skyagafe.netlify.app/" />
         <title>인공지능 관상궁합</title>
         <meta name="title" content="인공지능 관상 궁합" />
@@ -53,7 +53,7 @@
         <meta property="og:title" content="인공지능 관상궁합" />
         <meta
             property="og:description"
-            content="얼굴로 보는 인공지능 관상 궁합, 부부는 닮는다고 하죠 내가 좋아하는 연예인과의 관상 궁합으로 천생연분인지 확인해 보세요. 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다."
+            content="얼굴로 보는 인공지능 관상 궁합, 부부는 닮는다고 하죠 내가 좋아하는 연예인과의 관상 궁합으로 천생연분인지 확인해 보세요. 사진 데이터는 그 어디에도 전송되지 않습니다."
         />
         <meta property="og:image" content="https://skyagafe.netlify.app/img/idole.jpg" />
         <meta property="og:url" content="https://skyagafe.netlify.app/" />
@@ -128,7 +128,7 @@
                 ) {
                     if (ua.match('android') != null) {
                         window.open(
-                            'googlechrome://navigate?url=skyagafe.netlify.app/exo/' +
+                            'googlechrome://navigate?url=skyagafe.netlify.app/twice/' +
                                 lang.value +
                                 '/index.html'
                         ); //android
@@ -138,20 +138,21 @@
                         ua.indexOf('ipod') > -1
                     ) {
                         window.location.href =
-                            'https://skyagafe.netlify.app/exo/' + lang.value + '/index.html';
+                            'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
                     } else {
                         window.location.href =
-                            'https://skyagafe.netlify.app/exo/' + lang.value + '/index.html';
+                            'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
                     }
                 } else {
-                    window.location.href = 'https://skyagafe.netlify.app/exo/' + lang.value + '/index.html';
+                    window.location.href =
+                        'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
                 }
             }
         </script>
         <section class="section">
             <div class="title">
-                What would be the physiognomy and marital compatibility <br />of BTS members analyzed and
-                predicted by AI?
+                What would be the physiognomy and marital compatibility <br />of BTS members
+                analyzed and predicted by AI?
             </div>
             <div class="subtitle">
                 If the percentage is higher, <br />the marital compatibility becomes better.
@@ -171,7 +172,7 @@
                     accept="image/*"
                 />
                 <div class="drag-text">
-                    <img src="../../exo/img/upload.png" class="mt-5 pt-5 upload" />
+                    <img src="../../twice/img/upload.png" class="mt-5 pt-5 upload" />
                     <h3 class="mb-5 pb-5 pt-4 upload-text">
                         Put your face picture on it <br />or upload it by clicking the page!
                     </h3>
@@ -189,7 +190,7 @@
                     <img
                         class="file-upload-image2"
                         id="face-image2"
-                        src="../../exo/img/fox.jpg"
+                        src="../../twice/img/fox.jpg"
                         style="max-width: 80%; height: auto;"
                     />
                 </div>
@@ -208,7 +209,7 @@
                     <button
                         type="button"
                         class="remove-image"
-                        onclick="javascript:location.replace('https://skyagafe.netlify.app/exo');"
+                        onclick="javascript:location.replace('https://skyagafe.netlify.app/twice');"
                     >
                         Retry
                     </button>
@@ -302,7 +303,7 @@
             // More API functions here:
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
             // the link to your model provided by Teachable Machine export panel
-            const URL = 'https://teachablemachine.withgoogle.com/models/vX0MX8v_l/';
+            const URL = 'https://teachablemachine.withgoogle.com/models/Y4s2sKZeu/';
             let model, webcam, labelContainer, maxPredictions;
             // Load the image model and setup the webcam
             async function init() {
@@ -330,55 +331,54 @@
                 var resultMessage, resulttype, resultadd;
                 var same = '';
                 switch (prediction[0].className) {
-                    case 'Suho':
-                        resultMessage = 'You would be a good pair with Suho of Exo';
+                    case 'Jihyo':
+                        resultMessage = 'You would be a good pair with Jihyo of TWICE';
                         resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Su Ho';
+                        resulttype = 'Jihyo';
                         break;
-                    case 'Chanyeol':
-                        resultMessage = 'You would be a good pair with Chanyeol of Exo';
+                    case 'Nayeon':
+                        resultMessage = 'You would be a good pair with Nayeon of TWICE';
                         resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Chanyeol';
+                        resulttype = 'Nayeon';
                         break;
-                    case 'Kai':
-                        resultMessage = 'You would be a good pair with Kai of Exo';
+                    case 'Jeongyeon':
+                        resultMessage = 'You would be a good pair with Jihyo of TWICE';
                         resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'kai';
+                        resulttype = 'Jeongyeon';
                         break;
-                    case 'D.O.':
-                        resultMessage = 'You would be a good pair with D.O. of Exo';
+                    case 'Momo':
+                        resultMessage = 'You would be a good pair with Jeongyeon of TWICE';
                         resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'dio';
+                        resulttype = 'Momo';
                         break;
-                    case 'Baekhyun':
-                        resultMessage = 'You would be a good pair with Baekhyun of Exo';
+                    case 'Sana':
+                        resultMessage = 'You would be a good pair with Sana of TWICE';
                         resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Baek Hyeon';
+                        resulttype = 'Sana';
                         break;
-                    case 'Sehun':
-                        resultMessage = 'You would be a good pair with Sehun of Exo';
+                    case 'Mina':
+                        resultMessage = 'You would be a good pair with Mina of TWICE';
                         resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Sehun';
+                        resulttype = 'Mina';
+                    case 'Dahyun':
+                        resultMessage = 'You would be a good pair with Dahyun of TWICE';
+                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resulttype = 'Dahyun';
                         break;
-                    case 'Xiumin':
-                        resultMessage = 'You would be a good pair with Xiumin of Exo';
+                    case 'Chaeyoung':
+                        resultMessage = 'You would be a good pair with Chaeyoung of TWICE';
                         resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Si Umin';
+                        resulttype = 'Chaeyoung';
                         break;
-                    case 'Chen':
-                        resultMessage = 'You would be a good pair with Chen of Exo';
+                    case 'Tzuyu':
+                        resultMessage = 'You would be a good pair with Tzuyu of TWICE';
                         resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'chen';
-                        break;
-                    case 'Lay':
-                        resultMessage = 'You would be a good pair with Lay of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'lay';
+                        resulttype = 'Tzuyu';
                         break;
                     default:
                         resultMessage = 'What the??';
                 }
-                $('.file-upload-image2').attr('src', '../../exo/img/' + resulttype + '.jpg');
+                $('.file-upload-image2').attr('src', '../../twice/img/' + resulttype + '.jpg');
                 $('.result-message').html(resultMessage);
                 $('.result-add').html(resultadd);
                 for (let i = 0; i < 3; i++) {
