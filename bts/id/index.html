@@ -67,9 +67,7 @@
 
     <body>
         <nav id="header" class="p-3 navbar container navbar-expand-lg navbar-light nav-distance">
-            <a class="navbar-brand" href="https://skyagafe.netlify.app/"
-                >AI Face Matching</a
-            >
+            <a class="navbar-brand" href="https://skyagafe.netlify.app/">AI Face Matching</a>
 
             <button
                 class="navbar-toggler"
@@ -146,12 +144,15 @@
                             'https://skyagafe.netlify.app/bts/' + lang.value + '/index.html';
                     }
                 } else {
-                    window.location.href = 'https://skyagafe.netlify.app/bts/' + lang.value + '/index.html';
+                    window.location.href =
+                        'https://skyagafe.netlify.app/bts/' + lang.value + '/index.html';
                 }
             }
         </script>
         <section class="section">
-            <div class="title">Apakah cocok penyesuaian wajah dengan anggota BTS yang dianalisis oleh AI?</div>
+            <div class="title">
+                Apakah cocok penyesuaian wajah dengan anggota BTS yang dianalisis oleh AI?
+            </div>
             <div class="subtitle">Semakin tinggi %, semakin cocok penyesuaiannya.</div>
         </section>
 
@@ -215,9 +216,10 @@
         <div id="webcam-container"></div>
         <div class="container addthis_inline_share_toolbox_uufo"></div>
         <div class="container youtube-link">
-            <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link"
-                ></a
-            >
+            <a
+                href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"
+                class="youtube-link"
+            ></a>
         </div>
         <div class="container footer">
             <a>Pictures and data are not stored on the server</a>
@@ -328,38 +330,52 @@
                 var same = '';
                 switch (prediction[0].className) {
                     case 'RM':
-                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan RM di antara anggota BTS';
-                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resultMessage =
+                            'Hasil penyesuaian yang paling cocok dengan RM di antara anggota BTS';
+                        resultadd =
+                            'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
                         resulttype = 'RM';
                         break;
                     case 'Jin':
-                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan Jin di antara anggota BTS';
-                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resultMessage =
+                            'Hasil penyesuaian yang paling cocok dengan Jin di antara anggota BTS';
+                        resultadd =
+                            'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
                         resulttype = 'jin';
                         break;
                     case 'Suga':
-                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan Suga di antara anggota BTS';
-                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resultMessage =
+                            'Hasil penyesuaian yang paling cocok dengan Suga di antara anggota BTS';
+                        resultadd =
+                            'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
                         resulttype = 'Suga';
                         break;
                     case 'JHope':
-                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan JHope di antara anggota BTS';
-                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resultMessage =
+                            'Hasil penyesuaian yang paling cocok dengan JHope di antara anggota BTS';
+                        resultadd =
+                            'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
                         resulttype = 'JHope';
                         break;
                     case 'v':
-                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan V di antara anggota BTS';
-                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resultMessage =
+                            'Hasil penyesuaian yang paling cocok dengan V di antara anggota BTS';
+                        resultadd =
+                            'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
                         resulttype = 'v';
                         break;
                     case 'JiMin':
-                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan JiMin di antara anggota BTS';
-                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resultMessage =
+                            'Hasil penyesuaian yang paling cocok dengan JiMin di antara anggota BTS';
+                        resultadd =
+                            'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
                         resulttype = 'JiMin';
                         break;
                     case 'JungKook':
-                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan JungKook di antara anggota BTS';
-                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resultMessage =
+                            'Hasil penyesuaian yang paling cocok dengan JungKook di antara anggota BTS';
+                        resultadd =
+                            'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
                         resulttype = 'JungKook';
                         break;
                     default:
@@ -375,7 +391,7 @@
                         ' : Wajah yang terlihat mirip ' +
                         Math.round(prediction[i].probability.toFixed(2) * 100) +
                         '% dengan ' +
-                        prediction[i].className
+                        prediction[i].className;
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
             }
@@ -396,6 +412,54 @@
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
+        </div>
+        <div
+            class="box effect1"
+            style="
+                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+                    'AppleGothic', sans-serif;
+            "
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/en');"
+        >
+            <h3>
+                <a href="https://skyagafe.netlify.app/bts/en" style="color: #000000;">BTS</a>
+            </h3>
+        </div>
+        <div
+            class="box effect2"
+            style="
+                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+                    'AppleGothic', sans-serif;
+            "
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/en');"
+        >
+            <h3>
+                <a href="https://skyagafe.netlify.app/twice/en" style="color: #000000;">TWICE</a>
+            </h3>
+        </div>
+        <div
+            class="box effect3"
+            style="
+                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+                    'AppleGothic', sans-serif;
+            "
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/en');"
+        >
+            <h3>
+                <a href="https://skyagafe.netlify.app/exo/en" style="color: #000000;">EXO</a>
+            </h3>
+        </div>
+        <div
+            class="box effect4"
+            style="
+                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+                    'AppleGothic', sans-serif;
+            "
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/same');"
+        >
+            <h3>
+                <a href="https://skyagafe.netlify.app/same" style="color: #000000;">look like</a>
+            </h3>
         </div>
         <div
             class="buttons"
