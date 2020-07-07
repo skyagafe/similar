@@ -32,9 +32,9 @@
         />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="../../twice/css/style.css" />
+        <link rel="stylesheet" href="../../bts/css/style.css" />
         <link rel="canonical" href="https://skyagafe.netlify.app/" />
-        <title>인공지능 관상궁합</title>
+        <title>AI Face Matching with K-pop star</title>
         <meta name="title" content="인공지능 관상 궁합" />
         <meta
             name="subject"
@@ -46,7 +46,7 @@
         />
         <meta
             name="keywords"
-            content="닮은꼴, 인공지능 관상보기,인공지능 관상궁합. AI 관상, AI 관상보기, AI 관상궁합, 연예인과 궁합, 팬과 궁합, 내가 좋아하는 연예인과 궁합 보기, 관상 궁합, 관상궁합, 얼마나 닮았는지, AI 얼굴상, AI 닮은거, 비슷한 얼굴"
+            content="AI face matching, face matching, 닮은꼴, 인공지능 관상보기,인공지능 관상궁합. AI 관상, AI 관상보기, AI 관상궁합, 연예인과 궁합, 팬과 궁합, 내가 좋아하는 연예인과 궁합 보기, 관상 궁합, 관상궁합, 얼마나 닮았는지, AI 얼굴상, AI 닮은거, 비슷한 얼굴"
         />
         <meta name="author" content="닮은꼴 찾기" />
         <meta property="og:type" content="website" />
@@ -68,7 +68,7 @@
     <body>
         <nav id="header" class="p-3 navbar container navbar-expand-lg navbar-light nav-distance">
             <a class="navbar-brand" href="https://skyagafe.netlify.app/"
-                >Face Matching / 관상궁합</a
+                >AI Face Matching / 관상궁합</a
             >
 
             <button
@@ -108,9 +108,9 @@
         <section class="container d-flex flex-column justify-content-center align-items-center">
             <span class="select-language">Language</span>
             <select onchange="changeLanguage(this)" class="custom-select col-8">
+                <option value="id" lang="id">Indonesia</option>
                 <option value="ko" lang="ko">한국어</option>
                 <option value="en" lang="en">English</option>
-                <option value="id" lang="id">Indonesia</option>
                 <option value="zh" lang="zh">中文</option>
                 <!-- <option value="es" lang="es">español</option>
             <option value="ja" lang="ja">日本語</option>
@@ -130,7 +130,7 @@
                 ) {
                     if (ua.match('android') != null) {
                         window.open(
-                            'googlechrome://navigate?url=skyagafe.netlify.app/twice/' +
+                            'googlechrome://navigate?url=skyagafe.netlify.app/bts/' +
                                 lang.value +
                                 '/index.html'
                         ); //android
@@ -140,25 +140,19 @@
                         ua.indexOf('ipod') > -1
                     ) {
                         window.location.href =
-                            'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
+                            'https://skyagafe.netlify.app/bts/' + lang.value + '/index.html';
                     } else {
                         window.location.href =
-                            'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
+                            'https://skyagafe.netlify.app/bts/' + lang.value + '/index.html';
                     }
                 } else {
-                    window.location.href =
-                        'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
+                    window.location.href = 'https://skyagafe.netlify.app/bts/' + lang.value + '/index.html';
                 }
             }
         </script>
         <section class="section">
-            <div class="title">
-                What would be the physiognomy and marital compatibility <br />of BTS members
-                analyzed and predicted by AI?
-            </div>
-            <div class="subtitle">
-                If the percentage is higher, <br />the marital compatibility becomes better.
-            </div>
+            <div class="title">Apakah cocok penyesuaian wajah dengan anggota BTS yang dianalisis oleh AI?</div>
+            <div class="subtitle">Semakin tinggi %, semakin cocok penyesuaiannya.</div>
         </section>
 
         <script
@@ -174,9 +168,9 @@
                     accept="image/*"
                 />
                 <div class="drag-text">
-                    <img src="../../twice/img/upload.png" class="mt-5 pt-5 upload" />
+                    <img src="../../bts/img/upload.png" class="mt-5 pt-5 upload" />
                     <h3 class="mb-5 pb-5 pt-4 upload-text">
-                        Put your face picture on it <br />or upload it by clicking the page!
+                        Menaruh foto wajah <br />atau mengetuk layar untuk mengunggahnya!
                     </h3>
                 </div>
             </div>
@@ -192,7 +186,7 @@
                     <img
                         class="file-upload-image2"
                         id="face-image2"
-                        src="../../twice/img/fox.jpg"
+                        src="../../bts/img/fox.jpg"
                         style="max-width: 80%; height: auto;"
                     />
                 </div>
@@ -202,7 +196,7 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                    <p class="text-center">AI is analyzing it</p>
+                    <p class="text-center">AI sedang menganalisis</p>
                 </div>
                 <div class="result-message"></div>
                 <div class="result-add"></div>
@@ -211,7 +205,7 @@
                     <button
                         type="button"
                         class="remove-image"
-                        onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/en');"
+                        onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/id');"
                     >
                         Retry
                     </button>
@@ -222,12 +216,11 @@
         <div class="container addthis_inline_share_toolbox_uufo"></div>
         <div class="container youtube-link">
             <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link"
-                >제작 도움 : 조코딩 유튜브 채널</a
+                ></a
             >
         </div>
         <div class="container footer">
             <a>Pictures and data are not stored on the server</a>
-            <div>사진은 서버에 저장되지 않으니 안심하고 이용하세요</div>
             <a>a.k.a roy</a>
         </div>
         <!-- <div class="container disqus" id="disqus_thread"></div>
@@ -305,7 +298,7 @@
             // More API functions here:
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
             // the link to your model provided by Teachable Machine export panel
-            const URL = 'https://teachablemachine.withgoogle.com/models/Y4s2sKZeu/';
+            const URL = 'https://teachablemachine.withgoogle.com/models/nrpfFVlR1/';
             let model, webcam, labelContainer, maxPredictions;
             // Load the image model and setup the webcam
             async function init() {
@@ -333,66 +326,55 @@
                 var resultMessage, resulttype, resultadd;
                 var same = '';
                 switch (prediction[0].className) {
-                    case 'Jihyo':
-                        resultMessage = 'You would be a good pair with Jihyo of TWICE';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Jihyo';
+                    case 'RM':
+                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan RM di antara anggota BTS';
+                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resulttype = 'RM';
                         break;
-                    case 'Nayeon':
-                        resultMessage = 'You would be a good pair with Nayeon of TWICE';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Nayeon';
+                    case 'Jin':
+                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan Jin di antara anggota BTS';
+                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resulttype = 'jin';
                         break;
-                    case 'Jeongyeon':
-                        resultMessage = 'You would be a good pair with Jihyo of TWICE';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Jeongyeon';
+                    case 'Suga':
+                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan Suga di antara anggota BTS';
+                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resulttype = 'Suga';
                         break;
-                    case 'Momo':
-                        resultMessage = 'You would be a good pair with Jeongyeon of TWICE';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Momo';
+                    case 'JHope':
+                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan JHope di antara anggota BTS';
+                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resulttype = 'JHope';
                         break;
-                    case 'Sana':
-                        resultMessage = 'You would be a good pair with Sana of TWICE';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Sana';
+                    case 'v':
+                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan V di antara anggota BTS';
+                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resulttype = 'v';
                         break;
-                    case 'Mina':
-                        resultMessage = 'You would be a good pair with Mina of TWICE';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Mina';
-                    case 'Dahyun':
-                        resultMessage = 'You would be a good pair with Dahyun of TWICE';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Dahyun';
+                    case 'JiMin':
+                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan JiMin di antara anggota BTS';
+                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resulttype = 'JiMin';
                         break;
-                    case 'Chaeyoung':
-                        resultMessage = 'You would be a good pair with Chaeyoung of TWICE';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Chaeyoung';
-                        break;
-                    case 'Tzuyu':
-                        resultMessage = 'You would be a good pair with Tzuyu of TWICE';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
-                        resulttype = 'Tzuyu';
+                    case 'JungKook':
+                        resultMessage = 'Hasil penyesuaian yang paling cocok dengan JungKook di antara anggota BTS';
+                        resultadd = 'Katanya pasangan suami-istri sangat mirip kan? Kalau lebih dari 90%, itu jodoh dari Tuhan.';
+                        resulttype = 'JungKook';
                         break;
                     default:
-                        resultMessage = 'What the??';
+                        resultMessage = 'Apa yang??';
                 }
-                $('.file-upload-image2').attr('src', '../../twice/img/' + resulttype + '.jpg');
+                $('.file-upload-image2').attr('src', '../../bts/img/' + resulttype + '.jpg');
                 $('.result-message').html(resultMessage);
                 $('.result-add').html(resultadd);
                 for (let i = 0; i < 3; i++) {
                     const classPrediction =
                         'No.' +
                         (i + 1) +
-                        ' : ' +
-                        'You resemble ' +
-                        prediction[i].className +
-                        ' by ' +
+                        ' : Wajah yang terlihat mirip ' +
                         Math.round(prediction[i].probability.toFixed(2) * 100) +
-                        '%';
+                        '% dengan ' +
+                        prediction[i].className
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
             }
