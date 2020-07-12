@@ -32,7 +32,7 @@
         />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="../../exo/css/style.css" />
+        <link rel="stylesheet" href="../../blackpink/css/style.css" />
         <link rel="canonical" href="https://skyagafe.netlify.app/" />
         <title>AI Face Matching with K-pop star</title>
         <meta name="title" content="인공지능 관상 궁합" />
@@ -53,7 +53,7 @@
         <meta property="og:title" content="인공지능 관상궁합" />
         <meta
             property="og:description"
-            content="얼굴로 보는 인공지능 관상 궁합, 부부는 닮는다고 하죠 내가 좋아하는 연예인과의 관상 궁합으로 천생연분인지 확인해 보세요. 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다."
+            content="얼굴로 보는 인공지능 관상 궁합, 부부는 닮는다고 하죠 내가 좋아하는 연예인과의 관상 궁합으로 천생연분인지 확인해 보세요. 사진 데이터는 그 어디에도 전송되지 않습니다."
         />
         <meta property="og:image" content="https://skyagafe.netlify.app/img/idole.jpg" />
         <meta property="og:url" content="https://skyagafe.netlify.app/" />
@@ -108,11 +108,11 @@
         <section class="container d-flex flex-column justify-content-center align-items-center">
             <span class="select-language">Language</span>
             <select onchange="changeLanguage(this)" class="custom-select col-8">
-                <option value="ja" lang="ja">日本語</option>
+                <option value="zh" lang="zh">中文</option>
                 <option value="ko" lang="ko">한국어</option>
+                <option value="ja" lang="ja">日本語</option>
                 <option value="en" lang="en">English</option>
                 <option value="id" lang="id">Indonesia</option>
-                <option value="zh" lang="zh">中文</option>
                 <!-- <option value="es" lang="es">español</option>
             <option value="ja" lang="ja">日本語</option>
             <option value="zh" lang="zh">中文</option>
@@ -131,7 +131,7 @@
                 ) {
                     if (ua.match('android') != null) {
                         window.open(
-                            'googlechrome://navigate?url=skyagafe.netlify.app/exo/' +
+                            'googlechrome://navigate?url=skyagafe.netlify.app/blackpink/' +
                                 lang.value +
                                 '/index.html'
                         ); //android
@@ -141,19 +141,20 @@
                         ua.indexOf('ipod') > -1
                     ) {
                         window.location.href =
-                            'https://skyagafe.netlify.app/exo/' + lang.value + '/index.html';
+                            'https://skyagafe.netlify.app/blackpink/' + lang.value + '/index.html';
                     } else {
                         window.location.href =
-                            'https://skyagafe.netlify.app/exo/' + lang.value + '/index.html';
+                            'https://skyagafe.netlify.app/blackpink/' + lang.value + '/index.html';
                     }
                 } else {
-                    window.location.href = 'https://skyagafe.netlify.app/exo/' + lang.value + '/index.html';
+                    window.location.href =
+                        'https://skyagafe.netlify.app/blackpink/' + lang.value + '/index.html';
                 }
             }
         </script>
         <section class="section">
-            <div class="title">人工知能が分析するEXOメンバーたちとの観相は?</div>
-            <div class="subtitle">%が高いほど相性がいい</div>
+            <div class="title">人工智能分析的你和BLACKPINK成员们的面相匹配度是?</div>
+            <div class="subtitle">%越高说明更相配</div>
         </section>
 
         <script
@@ -169,9 +170,9 @@
                     accept="image/*"
                 />
                 <div class="drag-text">
-                    <img src="../../exo/img/upload.png" class="mt-5 pt-5 upload" />
+                    <img src="../../blackpink/img/upload.png" class="mt-5 pt-5 upload" />
                     <h3 class="mb-5 pb-5 pt-4 upload-text">
-                        顔写真を載せたり<br />画面を押してアップロードしましょう!
+                        请上传面部照片或<br />点击画面上传!
                     </h3>
                 </div>
             </div>
@@ -187,7 +188,7 @@
                     <img
                         class="file-upload-image2"
                         id="face-image2"
-                        src="../../exo/img/fox.jpg"
+                        src="../../blackpink/img/fox.jpg"
                         style="max-width: 80%; height: auto;"
                     />
                 </div>
@@ -197,7 +198,7 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                    <p class="text-center">AIが分析中です</p>
+                    <p class="text-center">AI正在分析.</p>
                 </div>
                 <div class="result-message"></div>
                 <div class="result-add"></div>
@@ -206,7 +207,7 @@
                     <button
                         type="button"
                         class="remove-image"
-                        onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/ja');"
+                        onclick="javascript:location.replace('https://skyagafe.netlify.app/blackpink/zh');"
                     >
                         Retry
                     </button>
@@ -299,7 +300,7 @@
             // More API functions here:
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
             // the link to your model provided by Teachable Machine export panel
-            const URL = 'https://teachablemachine.withgoogle.com/models/vX0MX8v_l/';
+            const URL = 'https://teachablemachine.withgoogle.com/models/8G7TuB4b9/';
             let model, webcam, labelContainer, maxPredictions;
             // Load the image model and setup the webcam
             async function init() {
@@ -327,66 +328,41 @@
                 var resultMessage, resulttype, resultadd;
                 var same = '';
                 switch (prediction[0].className) {
-                    case 'Suho':
-                        resultMessage = 'EXOのメンバーの中でSuhoと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
-                        resulttype = 'Su Ho';
+                    case 'Jenni':
+                        resultMessage = '在BLACKPINK成员中与Jenni最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
+                        resulttype = 'Jenni';
                         break;
-                    case 'Chanyeol':
-                        resultMessage = 'EXOのメンバーの中でChanyeolと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
-                        resulttype = 'Chanyeol';
+                    case 'Jisu':
+                        resultMessage = '在BLACKPINK成员中与Jisu最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
+                        resulttype = 'Jisu';
                         break;
-                    case 'Kai':
-                        resultMessage = 'EXOのメンバーの中でKaiと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
-                        resulttype = 'kai';
+                    case 'Lisa':
+                        resultMessage = '在BLACKPINK成员中与Lisa最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
+                        resulttype = 'Lisa';
                         break;
-                    case 'D.O.':
-                        resultMessage = 'EXOのメンバーの中でD.O.と一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
-                        resulttype = 'dio';
-                        break;
-                    case 'Baekhyun':
-                        resultMessage = 'EXOのメンバーの中でBaekhyunと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
-                        resulttype = 'Baek Hyeon';
-                        break;
-                    case 'Sehun':
-                        resultMessage = 'EXOのメンバーの中でSehunと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
-                        resulttype = 'Sehun';
-                        break;
-                    case 'Xiumin':
-                        resultMessage = 'EXOのメンバーの中でXiuminと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
-                        resulttype = 'Si Umin';
-                        break;
-                    case 'Chen':
-                        resultMessage = 'EXOのメンバーの中でChenと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
-                        resulttype = 'chen';
-                        break;
-                    case 'Lay':
-                        resultMessage = 'EXOのメンバーの中でLayと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
-                        resulttype = 'lay';
-                        break;
+                    case 'Rose':
+                        resultMessage = '在BLACKPINK成员中与Rose最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
+                        resulttype = 'Rose';
+                        break;                   
                     default:
-                        resultMessage = 'これは何ですか??';
+                        resultMessage = '什么??';
                 }
-                $('.file-upload-image2').attr('src', '../../exo/img/' + resulttype + '.jpg');
+                $('.file-upload-image2').attr('src', '../../blackpink/img/' + resulttype + '.jpg');
                 $('.result-message').html(resultMessage);
                 $('.result-add').html(resultadd);
                 for (let i = 0; i < 3; i++) {
                     const classPrediction =
                         'No.' +
                         (i + 1) +
-                        ' : ' +
+                        ' : 与' +
                         prediction[i].className +
-                        'と顔が' +
+                        '像' +
                         Math.round(prediction[i].probability.toFixed(2) * 100) +
-                        '%くらい似てます';
+                        '%';
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
             }
@@ -408,37 +384,36 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-        
         <div
             class="box effect1"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/ja');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/zh');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/bts/ja" style="color: #000000;">BTS</a>
+                <a href="https://skyagafe.netlify.app/bts/zh" style="color: #000000;">BTS</a>
             </h3>
         </div>
         <div
             class="box effect2"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/blackpink/ja');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/blackpink/zh');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/blackpink/ja" style="color: #000000;">BLACKPINK</a>
+                <a href="https://skyagafe.netlify.app/blackpink/zh" style="color: #000000;">BLACKPINK</a>
             </h3>
         </div>
         <div
             class="box effect3"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/ja');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/zh');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/twice/ja" style="color: #000000;">TWICE</a>
+                <a href="https://skyagafe.netlify.app/twice/zh" style="color: #000000;">TWICE</a>
             </h3>
         </div>
         <div
             class="box effect4"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/ja');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/zh');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/exo/ja" style="color: #000000;">EXO</a>
+                <a href="https://skyagafe.netlify.app/exo/zh" style="color: #000000;">EXO</a>
             </h3>
         </div>
         <div
