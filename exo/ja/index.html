@@ -108,9 +108,9 @@
         <section class="container d-flex flex-column justify-content-center align-items-center">
             <span class="select-language">Language</span>
             <select onchange="changeLanguage(this)" class="custom-select col-8">
-                <option value="en" lang="en">English</option>
-                <option value="ko" lang="ko">한국어</option>
                 <option value="ja" lang="ja">日本語</option>
+                <option value="ko" lang="ko">한국어</option>
+                <option value="en" lang="en">English</option>
                 <option value="id" lang="id">Indonesia</option>
                 <option value="zh" lang="zh">中文</option>
                 <!-- <option value="es" lang="es">español</option>
@@ -152,13 +152,8 @@
             }
         </script>
         <section class="section">
-            <div class="title">
-                What would be the physiognomy and marital compatibility <br />of EXO members analyzed and
-                predicted by AI?
-            </div>
-            <div class="subtitle">
-                If the percentage is higher, <br />the marital compatibility becomes better.
-            </div>
+            <div class="title">人工知能が分析するEXOメンバーたちとの観相は?</div>
+            <div class="subtitle">%が高いほど相性がいい</div>
         </section>
 
         <script
@@ -176,7 +171,7 @@
                 <div class="drag-text">
                     <img src="../../exo/img/upload.png" class="mt-5 pt-5 upload" />
                     <h3 class="mb-5 pb-5 pt-4 upload-text">
-                        Put your face picture on it <br />or upload it by clicking the page!
+                        顔写真を載せたり<br />画面を押してアップロードしましょう!
                     </h3>
                 </div>
             </div>
@@ -202,7 +197,7 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                    <p class="text-center">AI is analyzing it</p>
+                    <p class="text-center">AIが分析中です</p>
                 </div>
                 <div class="result-message"></div>
                 <div class="result-add"></div>
@@ -211,7 +206,7 @@
                     <button
                         type="button"
                         class="remove-image"
-                        onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/en');"
+                        onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/ja');"
                     >
                         Retry
                     </button>
@@ -333,52 +328,52 @@
                 var same = '';
                 switch (prediction[0].className) {
                     case 'Suho':
-                        resultMessage = 'You would be a good pair with Suho of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resultMessage = 'EXOのメンバーの中でSuhoと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
                         resulttype = 'Su Ho';
                         break;
                     case 'Chanyeol':
-                        resultMessage = 'You would be a good pair with Chanyeol of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resultMessage = 'EXOのメンバーの中でChanyeolと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
                         resulttype = 'Chanyeol';
                         break;
                     case 'Kai':
-                        resultMessage = 'You would be a good pair with Kai of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resultMessage = 'EXOのメンバーの中でKaiと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
                         resulttype = 'kai';
                         break;
                     case 'D.O.':
-                        resultMessage = 'You would be a good pair with D.O. of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resultMessage = 'EXOのメンバーの中でD.O.と一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
                         resulttype = 'dio';
                         break;
                     case 'Baekhyun':
-                        resultMessage = 'You would be a good pair with Baekhyun of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resultMessage = 'EXOのメンバーの中でBaekhyunと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
                         resulttype = 'Baek Hyeon';
                         break;
                     case 'Sehun':
-                        resultMessage = 'You would be a good pair with Sehun of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resultMessage = 'EXOのメンバーの中でSehunと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
                         resulttype = 'Sehun';
                         break;
                     case 'Xiumin':
-                        resultMessage = 'You would be a good pair with Xiumin of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resultMessage = 'EXOのメンバーの中でXiuminと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
                         resulttype = 'Si Umin';
                         break;
                     case 'Chen':
-                        resultMessage = 'You would be a good pair with Chen of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resultMessage = 'EXOのメンバーの中でChenと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
                         resulttype = 'chen';
                         break;
                     case 'Lay':
-                        resultMessage = 'You would be a good pair with Lay of Exo';
-                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
+                        resultMessage = 'EXOのメンバーの中でLayと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね? 9割を超えると天が定めた縁';
                         resulttype = 'lay';
                         break;
                     default:
-                        resultMessage = 'What the??';
+                        resultMessage = 'これは何ですか??';
                 }
                 $('.file-upload-image2').attr('src', '../../exo/img/' + resulttype + '.jpg');
                 $('.result-message').html(resultMessage);
@@ -388,11 +383,10 @@
                         'No.' +
                         (i + 1) +
                         ' : ' +
-                        'You resemble ' +
                         prediction[i].className +
-                        ' by ' +
+                        'と顔が' +
                         Math.round(prediction[i].probability.toFixed(2) * 100) +
-                        '%';
+                        '%くらい似てます';
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
             }
@@ -414,32 +408,49 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
+        
                 <div
             class="box effect1"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/en');"
+            style="
+                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+                    'AppleGothic', sans-serif;
+            "
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/ja');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/bts/en" style="color: #000000;">BTS</a>
+                <a href="https://skyagafe.netlify.app/bts/ja" style="color: #000000;">BTS</a>
             </h3>
         </div>
         <div
             class="box effect2"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/en');"
+            style="
+                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+                    'AppleGothic', sans-serif;
+            "
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/ja');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/twice/en" style="color: #000000;">TWICE</a>
+                <a href="https://skyagafe.netlify.app/twice/ja" style="color: #000000;">TWICE</a>
             </h3>
         </div>
         <div
             class="box effect3"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/en');"
+            style="
+                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+                    'AppleGothic', sans-serif;
+            "
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/ja');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/exo/en" style="color: #000000;">EXO</a>
+                <a href="https://skyagafe.netlify.app/exo/ja" style="color: #000000;">EXO</a>
             </h3>
         </div>
         <div
             class="box effect4"
+            style="
+                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+                    'AppleGothic', sans-serif;
+            "
             onclick="javascript:location.replace('https://skyagafe.netlify.app/same');"
         >
             <h3>
