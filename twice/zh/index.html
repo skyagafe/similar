@@ -108,14 +108,12 @@
         <section class="container d-flex flex-column justify-content-center align-items-center">
             <span class="select-language">Language</span>
             <select onchange="changeLanguage(this)" class="custom-select col-8">
-                <option value="ja" lang="ja">日本語</option>
+                <option value="zh" lang="zh">中文</option>
                 <option value="ko" lang="ko">한국어</option>
+                <option value="ja" lang="ja">日本語</option>
                 <option value="en" lang="en">English</option>
                 <option value="id" lang="id">Indonesia</option>
-                <option value="zh" lang="zh">中文</option>
                 <!-- <option value="es" lang="es">español</option>
-            <option value="ja" lang="ja">日本語</option>
-            <option value="zh" lang="zh">中文</option>
             <option value="vi" lang="vi">tiếng Việt</option>
             <option value="id" lang="id">Bahasa Indonesia</option> -->
             </select>
@@ -153,8 +151,8 @@
             }
         </script>
         <section class="section">
-            <div class="title">人工知能が分析するTWICEメンバーたちとの観相は?</div>
-            <div class="subtitle">%が高いほど相性がいい</div>
+            <div class="title">人工智能分析的你和TWICE成员们的面相匹配度是?</div>
+            <div class="subtitle">%越高说明更相配</div>
         </section>
 
         <script
@@ -172,7 +170,7 @@
                 <div class="drag-text">
                     <img src="../../twice/img/upload.png" class="mt-5 pt-5 upload" />
                     <h3 class="mb-5 pb-5 pt-4 upload-text">
-                        顔写真を載せたり<br />画面を押してアップロードしましょう!
+                        请上传面部照片或<br />点击画面上传!
                     </h3>
                 </div>
             </div>
@@ -198,7 +196,7 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                    <p class="text-center">AIが分析中です</p>
+                    <p class="text-center">AI正在分析.</p>
                 </div>
                 <div class="result-message"></div>
                 <div class="result-add"></div>
@@ -207,7 +205,7 @@
                     <button
                         type="button"
                         class="remove-image"
-                        onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/ja');"
+                        onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/zh');"
                     >
                         Retry
                     </button>
@@ -329,51 +327,51 @@
                 var same = '';
                 switch (prediction[0].className) {
                     case 'Jihyo':
-                        resultMessage = 'TWICEのメンバーの中でJihyoと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resultMessage = '在TWICE成员中与Jihyo最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
                         resulttype = 'Jihyo';
                         break;
                     case 'Nayeon':
-                        resultMessage = 'TWICEのメンバーの中でNayeonと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resultMessage = '在TWICE成员中与Nayeon最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
                         resulttype = 'Nayeon';
                         break;
                     case 'Jeongyeon':
-                        resultMessage = 'TWICEのメンバーの中でJeongyeonと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resultMessage = '在TWICE成员中与Jeongyeon最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
                         resulttype = 'Jeongyeon';
                         break;
                     case 'Momo':
-                        resultMessage = 'TWICEのメンバーの中でMomoと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resultMessage = '在TWICE成员中与Momo最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
                         resulttype = 'Momo';
                         break;
                     case 'Sana':
-                        resultMessage = 'TWICEのメンバーの中でSanaと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resultMessage = '在TWICE成员中与Sana最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
                         resulttype = 'Sana';
                         break;
                     case 'Mina':
-                        resultMessage = 'TWICEのメンバーの中でMinaと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resultMessage = '在TWICE成员中与Mina最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
                         resulttype = 'Mina';
                     case 'Dahyun':
-                        resultMessage = 'TWICEのメンバーの中でDahyunと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resultMessage = '在TWICE成员中与Dahyun最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
                         resulttype = 'Dahyun';
                         break;
                     case 'Chaeyoung':
-                        resultMessage = 'TWICEのメンバーの中でChaeyoungと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resultMessage = '在TWICE成员中与Chaeyoung最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
                         resulttype = 'Chaeyoung';
                         break;
                     case 'Tzuyu':
-                        resultMessage = 'TWICEのメンバーの中でTzuyuと一番よく似合います';
-                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resultMessage = '在TWICE成员中与Tzuyu最相配';
+                        resultadd = '听说过夫妻相吧?超过90%就是天生一对噢.';
                         resulttype = 'Tzuyu';
                         break;
                     default:
-                        resultMessage = 'これは何ですか??';
+                        resultMessage = '什么??';
                 }
                 $('.file-upload-image2').attr('src', '../../twice/img/' + resulttype + '.jpg');
                 $('.result-message').html(resultMessage);
@@ -382,11 +380,11 @@
                     const classPrediction =
                         'No.' +
                         (i + 1) +
-                        ' : ' +
+                        ' : 与' +
                         prediction[i].className +
-                        'と顔が' +
+                        '像' +
                         Math.round(prediction[i].probability.toFixed(2) * 100) +
-                        '%くらい似てます';
+                        '%';
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
             }
@@ -410,26 +408,26 @@
         </div>
         <div
             class="box effect1"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/ja');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/zh');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/bts/ja" style="color: #000000;">BTS</a>
+                <a href="https://skyagafe.netlify.app/bts/zh" style="color: #000000;">BTS</a>
             </h3>
         </div>
         <div
             class="box effect2"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/ja');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/zh');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/twice/ja" style="color: #000000;">TWICE</a>
+                <a href="https://skyagafe.netlify.app/twice/zh" style="color: #000000;">TWICE</a>
             </h3>
         </div>
         <div
             class="box effect3"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/ja');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/zh');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/exo/ja" style="color: #000000;">EXO</a>
+                <a href="https://skyagafe.netlify.app/exo/zh" style="color: #000000;">EXO</a>
             </h3>
         </div>
         <div
