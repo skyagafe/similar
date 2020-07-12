@@ -32,7 +32,7 @@
         />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <link rel="stylesheet" href="../../bts/css/style.css" />
+        <link rel="stylesheet" href="../../twice/css/style.css" />
         <link rel="canonical" href="https://skyagafe.netlify.app/" />
         <title>AI Face Matching with K-pop star</title>
         <meta name="title" content="인공지능 관상 궁합" />
@@ -46,7 +46,7 @@
         />
         <meta
             name="keywords"
-            content="AI face matching, face matching, 닮은꼴, 인공지능 관상보기,인공지능 관상궁합. AI 관상, AI 관상보기, AI 관상궁합, 연예인과 궁합, 팬과 궁합, 내가 좋아하는 연예인과 궁합 보기, 관상 궁합, 관상궁합, 얼마나 닮았는지, AI 얼굴상, AI 닮은거, 비슷한 얼굴"
+            content="닮은꼴, 인공지능 관상보기,인공지능 관상궁합. AI 관상, AI 관상보기, AI 관상궁합, 연예인과 궁합, 팬과 궁합, 내가 좋아하는 연예인과 궁합 보기, 관상 궁합, 관상궁합, 얼마나 닮았는지, AI 얼굴상, AI 닮은거, 비슷한 얼굴"
         />
         <meta name="author" content="닮은꼴 찾기" />
         <meta property="og:type" content="website" />
@@ -114,6 +114,8 @@
                 <option value="id" lang="id">Indonesia</option>
                 <option value="zh" lang="zh">中文</option>
                 <!-- <option value="es" lang="es">español</option>
+            <option value="ja" lang="ja">日本語</option>
+            <option value="zh" lang="zh">中文</option>
             <option value="vi" lang="vi">tiếng Việt</option>
             <option value="id" lang="id">Bahasa Indonesia</option> -->
             </select>
@@ -129,7 +131,7 @@
                 ) {
                     if (ua.match('android') != null) {
                         window.open(
-                            'googlechrome://navigate?url=skyagafe.netlify.app/bts/' +
+                            'googlechrome://navigate?url=skyagafe.netlify.app/twice/' +
                                 lang.value +
                                 '/index.html'
                         ); //android
@@ -139,18 +141,19 @@
                         ua.indexOf('ipod') > -1
                     ) {
                         window.location.href =
-                            'https://skyagafe.netlify.app/bts/' + lang.value + '/index.html';
+                            'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
                     } else {
                         window.location.href =
-                            'https://skyagafe.netlify.app/bts/' + lang.value + '/index.html';
+                            'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
                     }
                 } else {
-                    window.location.href = 'https://skyagafe.netlify.app/bts/' + lang.value + '/index.html';
+                    window.location.href =
+                        'https://skyagafe.netlify.app/twice/' + lang.value + '/index.html';
                 }
             }
         </script>
         <section class="section">
-            <div class="title">人工知能が分析するBTSメンバーたちとの観相は?</div>
+            <div class="title">人工知能が分析するTWICEメンバーたちとの観相は?</div>
             <div class="subtitle">%が高いほど相性がいい</div>
         </section>
 
@@ -167,7 +170,7 @@
                     accept="image/*"
                 />
                 <div class="drag-text">
-                    <img src="../../bts/img/upload.png" class="mt-5 pt-5 upload" />
+                    <img src="../../twice/img/upload.png" class="mt-5 pt-5 upload" />
                     <h3 class="mb-5 pb-5 pt-4 upload-text">
                         顔写真を載せたり<br />画面を押してアップロードしましょう!
                     </h3>
@@ -185,7 +188,7 @@
                     <img
                         class="file-upload-image2"
                         id="face-image2"
-                        src="../../bts/img/fox.jpg"
+                        src="../../twice/img/fox.jpg"
                         style="max-width: 80%; height: auto;"
                     />
                 </div>
@@ -204,7 +207,7 @@
                     <button
                         type="button"
                         class="remove-image"
-                        onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/ko');"
+                        onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/ko');"
                     >
                         Retry
                     </button>
@@ -297,7 +300,7 @@
             // More API functions here:
             // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
             // the link to your model provided by Teachable Machine export panel
-            const URL = 'https://teachablemachine.withgoogle.com/models/nrpfFVlR1/';
+            const URL = 'https://teachablemachine.withgoogle.com/models/Y4s2sKZeu/';
             let model, webcam, labelContainer, maxPredictions;
             // Load the image model and setup the webcam
             async function init() {
@@ -325,45 +328,54 @@
                 var resultMessage, resulttype, resultadd;
                 var same = '';
                 switch (prediction[0].className) {
-                    case 'RM':
-                        resultMessage = 'BTSのメンバーの中でRMと一番よく似合います';
+                    case 'Jihyo':
+                        resultMessage = 'TWICEのメンバーの中でJihyoと一番よく似合います';
                         resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
-                        resulttype = 'RM';
+                        resulttype = 'Jihyo';
                         break;
-                    case 'Jin':
-                        resultMessage = 'BTSのメンバーの中でJinと一番よく似合います';
+                    case 'Nayeon':
+                        resultMessage = 'TWICEのメンバーの中でNayeonと一番よく似合います';
                         resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
-                        resulttype = 'jin';
+                        resulttype = 'Nayeon';
                         break;
-                    case 'Suga':
-                        resultMessage = 'BTSのメンバーの中でSugaと一番よく似合います';
+                    case 'Jeongyeon':
+                        resultMessage = 'TWICEのメンバーの中でJeongyeonと一番よく似合います';
                         resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
-                        resulttype = 'Suga';
+                        resulttype = 'Jeongyeon';
                         break;
-                    case 'JHope':
-                        resultMessage = 'BTSのメンバーの中でJHopeと一番よく似合います';
+                    case 'Momo':
+                        resultMessage = 'TWICEのメンバーの中でMomoと一番よく似合います';
                         resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
-                        resulttype = 'JHope';
+                        resulttype = 'Momo';
                         break;
-                    case 'v':
-                        resultMessage = 'BTSのメンバーの中でVと一番よく似合います';
+                    case 'Sana':
+                        resultMessage = 'TWICEのメンバーの中でSanaと一番よく似合います';
                         resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
-                        resulttype = 'v';
+                        resulttype = 'Sana';
                         break;
-                    case 'JiMin':
-                        resultMessage = 'BTSのメンバーの中でJiMinと一番よく似合います';
+                    case 'Mina':
+                        resultMessage = 'TWICEのメンバーの中でMinaと一番よく似合います';
                         resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
-                        resulttype = 'JiMin';
+                        resulttype = 'Mina';
+                    case 'Dahyun':
+                        resultMessage = 'TWICEのメンバーの中でDahyunと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resulttype = 'Dahyun';
                         break;
-                    case 'JungKook':
-                        resultMessage = 'BTSのメンバーの中でJungKookと一番よく似合います';
+                    case 'Chaeyoung':
+                        resultMessage = 'TWICEのメンバーの中でChaeyoungと一番よく似合います';
                         resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
-                        resulttype = 'JungKook';
+                        resulttype = 'Chaeyoung';
+                        break;
+                    case 'Tzuyu':
+                        resultMessage = 'TWICEのメンバーの中でTzuyuと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
+                        resulttype = 'Tzuyu';
                         break;
                     default:
                         resultMessage = 'これは何ですか??';
                 }
-                $('.file-upload-image2').attr('src', '../../bts/img/' + resulttype + '.jpg');
+                $('.file-upload-image2').attr('src', '../../twice/img/' + resulttype + '.jpg');
                 $('.result-message').html(resultMessage);
                 $('.result-add').html(resultadd);
                 for (let i = 0; i < 3; i++) {
@@ -396,13 +408,8 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
-        
-                <div
+        <div
             class="box effect1"
-            style="
-                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
-                    'AppleGothic', sans-serif;
-            "
             onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/en');"
         >
             <h3>
@@ -411,10 +418,6 @@
         </div>
         <div
             class="box effect2"
-            style="
-                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
-                    'AppleGothic', sans-serif;
-            "
             onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/en');"
         >
             <h3>
@@ -423,10 +426,6 @@
         </div>
         <div
             class="box effect3"
-            style="
-                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
-                    'AppleGothic', sans-serif;
-            "
             onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/en');"
         >
             <h3>
@@ -435,17 +434,12 @@
         </div>
         <div
             class="box effect4"
-            style="
-                font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
-                    'AppleGothic', sans-serif;
-            "
             onclick="javascript:location.replace('https://skyagafe.netlify.app/same');"
         >
             <h3>
                 <a href="https://skyagafe.netlify.app/same" style="color: #000000;">look like</a>
             </h3>
         </div>
-        
         <div
             class="buttons"
             style="text-align: center;"
