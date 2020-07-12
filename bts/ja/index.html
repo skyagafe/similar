@@ -68,7 +68,7 @@
     <body>
         <nav id="header" class="p-3 navbar container navbar-expand-lg navbar-light nav-distance">
             <a class="navbar-brand" href="https://skyagafe.netlify.app/"
-                >AI Face Matching / 관상궁합</a
+                >AI Face Matching</a
             >
 
             <button
@@ -108,10 +108,10 @@
         <section class="container d-flex flex-column justify-content-center align-items-center">
             <span class="select-language">Language</span>
             <select onchange="changeLanguage(this)" class="custom-select col-8">
+                <option value="ja" lang="ja">日本語</option>
                 <option value="ko" lang="ko">한국어</option>
                 <option value="en" lang="en">English</option>
                 <option value="id" lang="id">Indonesia</option>
-                <option value="ja" lang="ja">日本語</option>
                 <option value="zh" lang="zh">中文</option>
                 <!-- <option value="es" lang="es">español</option>
             <option value="vi" lang="vi">tiếng Việt</option>
@@ -150,8 +150,8 @@
             }
         </script>
         <section class="section">
-            <div class="title">인공지능이 분석하는 BTS 멤버들과의 관상궁합은?</div>
-            <div class="subtitle">%가 높을수록 궁합이 좋아요</div>
+            <div class="title">人工知能が分析するBTSメンバーたちとの観相は?</div>
+            <div class="subtitle">%が高いほど相性がいい</div>
         </section>
 
         <script
@@ -169,7 +169,7 @@
                 <div class="drag-text">
                     <img src="../../bts/img/upload.png" class="mt-5 pt-5 upload" />
                     <h3 class="mb-5 pb-5 pt-4 upload-text">
-                        얼굴 사진을 올려놓거나 <br />화면을 눌러서 업로드하세요!
+                        顔写真を載せたり <br />画面を押してアップロードしましょう！
                     </h3>
                 </div>
             </div>
@@ -195,7 +195,7 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                    <p class="text-center">AI가 관상을 분석 중입니다</p>
+                    <p class="text-center">AIが分析中です</p>
                 </div>
                 <div class="result-message"></div>
                 <div class="result-add"></div>
@@ -206,7 +206,7 @@
                         class="remove-image"
                         onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/ko');"
                     >
-                        다시하기
+                        Retry
                     </button>
                 </div>
             </div>
@@ -215,12 +215,11 @@
         <div class="container addthis_inline_share_toolbox_uufo"></div>
         <div class="container youtube-link">
             <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link"
-                >제작 도움 : 조코딩 유튜브 채널</a
+                ></a
             >
         </div>
         <div class="container footer">
             <a>Pictures and data are not stored on the server</a>
-            <div>사진은 서버에 저장되지 않으니 안심하고 이용하세요</div>
             <a>a.k.a roy</a>
         </div>
         <!-- <div class="container disqus" id="disqus_thread"></div>
@@ -327,42 +326,42 @@
                 var same = '';
                 switch (prediction[0].className) {
                     case 'RM':
-                        resultMessage = 'BTS 멤버들 중 RM과의 관상 궁합이 제일 좋네요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'BTSのメンバーの中でRMと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
                         resulttype = 'RM';
                         break;
                     case 'Jin':
-                        resultMessage = 'BTS 멤버들 중 Jin과의 관상 궁합이 제일 좋아요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'BTSのメンバーの中でJinと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
                         resulttype = 'jin';
                         break;
                     case 'Suga':
-                        resultMessage = 'BTS 멤버들 중 Suga와의 관상 궁합이 제일 좋아요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'BTSのメンバーの中でSugaと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
                         resulttype = 'Suga';
                         break;
                     case 'JHope':
-                        resultMessage = 'BTS 멤버들 중 JHope과의 관상 궁합이 제일 좋아요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'BTSのメンバーの中でJHopeと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
                         resulttype = 'JHope';
                         break;
                     case 'v':
-                        resultMessage = 'BTS 멤버들 중 v과의 관상 궁합이 제일 좋아요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'BTSのメンバーの中でVと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
                         resulttype = 'v';
                         break;
                     case 'JiMin':
-                        resultMessage = 'BTS 멤버들 중 JiMin과의 관상 궁합이 제일 좋아요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'BTSのメンバーの中でJiMinと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
                         resulttype = 'JiMin';
                         break;
                     case 'JungKook':
-                        resultMessage = 'BTS 멤버들 중 JungKook과의 관상 궁합이 제일 좋아요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'BTSのメンバーの中でJungKookと一番よく似合います';
+                        resultadd = '夫婦は似てると言いますね？ 9割を超えると天が定めた縁';
                         resulttype = 'JungKook';
                         break;
                     default:
-                        resultMessage = '이게뭐징??';
+                        resultMessage = 'これは何ですか??';
                 }
                 $('.file-upload-image2').attr('src', '../../bts/img/' + resulttype + '.jpg');
                 $('.result-message').html(resultMessage);
@@ -373,9 +372,9 @@
                         (i + 1) +
                         ' : ' +
                         prediction[i].className +
-                        '하고 얼굴이 ' +
+                        'と顔が' +
                         Math.round(prediction[i].probability.toFixed(2) * 100) +
-                        '% 만큼 닮았어요';
+                        '%くらい似てます';
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
             }
