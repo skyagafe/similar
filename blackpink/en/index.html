@@ -34,7 +34,7 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="../../blckpink/css/style.css" />
         <link rel="canonical" href="https://skyagafe.netlify.app/" />
-        <title>인공지능 관상궁합</title>
+        <title>AI Face Matching with K-pop star</title>
         <meta name="title" content="인공지능 관상 궁합" />
         <meta
             name="subject"
@@ -68,7 +68,7 @@
     <body>
         <nav id="header" class="p-3 navbar container navbar-expand-lg navbar-light nav-distance">
             <a class="navbar-brand" href="https://skyagafe.netlify.app/"
-                >AI Face Matching / 관상궁합</a
+                >AI Face Matching</a
             >
 
             <button
@@ -108,14 +108,12 @@
         <section class="container d-flex flex-column justify-content-center align-items-center">
             <span class="select-language">Language</span>
             <select onchange="changeLanguage(this)" class="custom-select col-8">
-                <option value="ko" lang="ko">한국어</option>
-                <option value="ja" lang="ja">日本語</option>
                 <option value="en" lang="en">English</option>
+                <option value="ja" lang="ja">日本語</option>
+                <option value="ko" lang="ko">한국어</option>
                 <option value="id" lang="id">Indonesia</option>
                 <option value="zh" lang="zh">中文</option>
                 <!-- <option value="es" lang="es">español</option>
-            <option value="ja" lang="ja">日本語</option>
-            <option value="zh" lang="zh">中文</option>
             <option value="vi" lang="vi">tiếng Việt</option>
             <option value="id" lang="id">Bahasa Indonesia</option> -->
             </select>
@@ -153,8 +151,9 @@
             }
         </script>
         <section class="section">
-            <div class="title">인공지능이 분석하는 BLACKPINK 멤버들과의 관상궁합은?</div>
-            <div class="subtitle">%가 높을수록 궁합이 좋아요</div>
+            <div class="title">What would be the physiognomy and marital compatibility <br />of BLACKPINK members
+                analyzed and predicted by AI?</div>
+            <div class="subtitle">If the percentage is higher,<br />the marital compatibility becomes better.</div>
         </section>
 
         <script
@@ -172,7 +171,7 @@
                 <div class="drag-text">
                     <img src="../../blckpink/img/upload.png" class="mt-5 pt-5 upload" />
                     <h3 class="mb-5 pb-5 pt-4 upload-text">
-                        얼굴 사진을 올려놓거나 <br />화면을 눌러서 업로드하세요!
+                        Put your face picture on it<br />or upload it by clicking the page!
                     </h3>
                 </div>
             </div>
@@ -198,7 +197,7 @@
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                    <p class="text-center">AI가 관상을 분석 중입니다</p>
+                    <p class="text-center">AI is analyzing it</p>
                 </div>
                 <div class="result-message"></div>
                 <div class="result-add"></div>
@@ -207,9 +206,9 @@
                     <button
                         type="button"
                         class="remove-image"
-                        onclick="javascript:location.replace('https://skyagafe.netlify.app/blackpink/ko');"
+                        onclick="javascript:location.replace('https://skyagafe.netlify.app/blackpink/en');"
                     >
-                        다시하기
+                        Retry
                     </button>
                 </div>
             </div>
@@ -218,12 +217,11 @@
         <div class="container addthis_inline_share_toolbox_uufo"></div>
         <div class="container youtube-link">
             <a href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" class="youtube-link"
-                >제작 도움 : 조코딩 유튜브 채널</a
+                ></a
             >
         </div>
         <div class="container footer">
             <a>Pictures and data are not stored on the server</a>
-            <div>사진은 서버에 저장되지 않으니 안심하고 이용하세요</div>
             <a>a.k.a roy</a>
         </div>
         <!-- <div class="container disqus" id="disqus_thread"></div>
@@ -330,27 +328,27 @@
                 var same = '';
                 switch (prediction[0].className) {
                     case 'Jenni':
-                        resultMessage = 'BLACKPINK 멤버들 중 Jenni와의 관상 궁합이 제일 좋네요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'You would be a good pair with Jenni of BLACKPINK';
+                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
                         resulttype = 'Jenni';
                         break;
                     case 'Jisu':
-                        resultMessage = 'BLACKPINK 멤버들 중 Jisu와의 관상 궁합이 제일 좋아요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'You would be a good pair with Jisu of BLACKPINK';
+                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
                         resulttype = 'Jisu';
                         break;
                     case 'Lisa':
-                        resultMessage = 'BLACKPINK 멤버들 중 Lisa와의 관상 궁합이 제일 좋아요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'You would be a good pair with Lisa of BLACKPINK';
+                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
                         resulttype = 'Lisa';
                         break;
                     case 'Rose':
-                        resultMessage = 'BLACKPINK 멤버들 중 Rose와의 관상 궁합이 제일 좋아요';
-                        resultadd = '부부는 닮는다고 하죠? 90%가 넘으면 천생연분';
+                        resultMessage = 'You would be a good pair with Rose of BLACKPINK';
+                        resultadd = 'There is a proverb, “Like husband, like wife”. If it is higher than 90%, you are a match made in heaven.';
                         resulttype = 'Rose';
                         break;                   
                     default:
-                        resultMessage = '이게뭐징??';
+                        resultMessage = 'What the??';
                 }
                 $('.file-upload-image2').attr('src', '../../blackpink/img/' + resulttype + '.jpg');
                 $('.result-message').html(resultMessage);
@@ -360,10 +358,11 @@
                         'No.' +
                         (i + 1) +
                         ' : ' +
+                        'You resemble ' +
                         prediction[i].className +
-                        '하고 얼굴이 ' +
+                        ' by ' +
                         Math.round(prediction[i].probability.toFixed(2) * 100) +
-                        '% 만큼 닮았어요';
+                        '%';
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
             }
@@ -387,34 +386,34 @@
         </div>
         <div
             class="box effect1"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/ko');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/bts/en');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/bts/ko" style="color: #000000;">BTS</a>
+                <a href="https://skyagafe.netlify.app/bts/en" style="color: #000000;">BTS</a>
             </h3>
         </div>
         <div
             class="box effect2"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/blackpink/ko');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/blackpink/en');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/blackpink/ko" style="color: #000000;">BLACKPINK</a>
+                <a href="https://skyagafe.netlify.app/blackpink/en" style="color: #000000;">BLACKPINK</a>
             </h3>
         </div>
         <div
             class="box effect3"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/ko');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/twice/en');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/twice/ko" style="color: #000000;">TWICE</a>
+                <a href="https://skyagafe.netlify.app/twice/en" style="color: #000000;">TWICE</a>
             </h3>
         </div>
         <div
             class="box effect4"
-            onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/ko');"
+            onclick="javascript:location.replace('https://skyagafe.netlify.app/exo/en');"
         >
             <h3>
-                <a href="https://skyagafe.netlify.app/exo/ko" style="color: #000000;">EXO</a>
+                <a href="https://skyagafe.netlify.app/exo/en" style="color: #000000;">EXO</a>
             </h3>
         </div>
         <div
